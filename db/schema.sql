@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS thyme_db;
+CREATE DATABASE thyme_db;
