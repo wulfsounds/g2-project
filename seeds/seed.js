@@ -1,14 +1,31 @@
 
 // Borrowed from unit 14-MVC Mini Project
 const sequelize = require('../config/connection');
-const { User, Project } = require('../models');
+const seedCategories = require('./category-seeds');
+const seedRecipe = require('./recipe-seeds');
+const seedPlaylist = require('./playlist-seeds');
+const seedWine = require('./wine-seeds');
+const { User } = require('../models');
 
 const userData = require('./userData.json');
-const projectData = require('./projectData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
+  console.log('\n----- DATABASE SYNCED -----\n');
+  await seedCategories();
+  console.log('\n----- CATEGORIES SEEDED -----\n');
 
+  await seedRecipe();
+  console.log('\n----- RECIPE SEEDED -----\n');
+
+  await seedPlaylist();
+  console.log('\n----- PLAYLIST SEEDED -----\n');
+
+  await seedWine();
+  console.log('\n----- WINE SEEDED -----\n');
+  
+
+  //User seeding process
   const users = await User.bulkCreate(userData, {
     individualHooks: true,
     returning: true,
