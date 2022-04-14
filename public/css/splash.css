@@ -1,0 +1,48 @@
+img {
+  width: 100%;
+  object-fit: cover;
+  object-position: 10% 20%;
+}
+
+header {
+  display: flex !important;
+  position: relative;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center;
+  padding: 0rem 2rem;
+}
+
+h1 {
+  /* Typeface */
+  font-family: ohno-blazeface, sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  color: #CC88B7;
+}
+
+#title-head {
+  /* Sizing */
+  margin: 0;
+  padding: 8px;
+
+  /* Color */
+  color: #000;
+}
+
+.thyme-nav {
+  /* Sizing */
+  position: static;
+  padding: 0 !important;
+
+  /* Typeface */
+  font-family: ador-hairline, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+}
+
+a:link a:visited {
+  text-decoration: none;
+  color: #000;
+}
