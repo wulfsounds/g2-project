@@ -37,6 +37,7 @@ User.init(
         len: [8],
       },
     },
+    //TODO: Add section for music and cuisine preferences (may or may not get used)
   },
   {
     hooks: {
