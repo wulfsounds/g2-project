@@ -1,4 +1,3 @@
-// Borrowed from ecomm hw
 const { Category } = require('../models');
 
 const categoryData = [

@@ -1,5 +1,3 @@
-
-//Borrowed from ecomm hw
 const { Recipe } = require('../models');
 
 const recipeData = [
