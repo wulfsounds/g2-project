@@ -7,16 +7,16 @@ router.post('/', async (req, res) => {
   try {
 
     // check if password and confirm password inputs match
-    if (req.body.password === req.body.confirmpw) {
+    // if (req.body.password === req.body.confirmpw) {
       const dbUserData = await User.create({
         username: req.body.username,
         email: req.body.email,
         password: req.body.password,
       });
 
-    } else {
-      alert('Passwords do not match!')
-    }
+    // } else {
+    //   alert('Passwords do not match!')
+    // }
 
 
     // As soon as user creates an account, automatically generate a list for each day (Mon-Sun).. createLists is under utils folder
