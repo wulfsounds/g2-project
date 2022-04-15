@@ -62,7 +62,6 @@ User.hasMany(List, {
 List.belongsTo(User, {
   foreignKey: 'user_id'
 });
-
 List.hasMany(Task, {
   foreignKey: 'list_id',
   onDelete: 'CASCADE'
@@ -71,7 +70,6 @@ List.hasMany(Task, {
 Task.belongsTo(List, {
   foreignKey: 'list_id'
 });
-
 User.hasMany(Task, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
@@ -91,4 +89,3 @@ module.exports = {
   List,
   Task,
  };
-

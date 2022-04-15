@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 const createLists = require('../../utils/createLists')
-
 // CREATE new user
 router.post('/', async (req, res) => {
 
@@ -24,12 +23,10 @@ router.post('/', async (req, res) => {
     if(dbUserData) {
       createLists(dbUserData.id);
     }
-
     req.session.save(() => {
       req.session.loggedIn = true;
       req.session.user_id = dbUserData.id;
       req.session.username = dbUserData.username;
-
       res.status(200).json(dbUserData);
     });
     
@@ -37,7 +34,7 @@ router.post('/', async (req, res) => {
     console.log(err);
     res.status(500).json(err);
   }
-  
+
 });
 
 // Login
