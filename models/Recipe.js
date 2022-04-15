@@ -1,3 +1,5 @@
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
 // Initialize Product model (table) by extending off Sequelize's Model class
 class Recipe extends Model {}
 
