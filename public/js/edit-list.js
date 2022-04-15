@@ -6,7 +6,7 @@ const handleForm = async(event) => {
     event.preventDefault();
     event.stopPropagation();
 
-    console.log(event.target.className)
+    // console.log(event.target.className)
 
     const target = event.target;
 
@@ -14,8 +14,33 @@ const handleForm = async(event) => {
       delTask(target);
     } else if (event.target.className === "updatetask") {
       updateTask(target);
+    } else if (event.target.className === "addtask") {
+      addTask(target);
     }
 }
+
+const addTask = async (target) => {
+    const task = target.previousElementSibling.value;
+
+    console.log(task)
+
+    if (task) {
+      const response = await fetch(`/api/lists/${listId}`, {
+        method: 'POST',
+        body: JSON.stringify({ task }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+
+      if (response.ok) {
+        document.location.replace(`/list/${listId}`);
+      } else {
+        alert('Failed to add task.');
+      }
+    }
+
+}
+
+
 
 const updateTask = async (target) => {
     console.log(target.dataset.id);

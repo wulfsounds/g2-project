@@ -11,7 +11,7 @@
             {{#if list.tasks}}
                 {{#each list.tasks as |task|}}
                 <div>
-                    <input name="task" type="text" value="{{task.task}}">
+                    <input name="task" type="text" value="{{task.task}}" required>
                     <button data-id="{{task.id}}" class="updatetask" type="submit">update</button>
                     <button id="{{task.id}}" class="deletetask" type="submit">delete</button>
                 </div>
@@ -20,7 +20,7 @@
 
                 {{!-- ADD TASK INPUT AND BUTTON --}}
                 <div>
-                    <input type="text" name="task" placeholder="enter task">
+                    <input type="text" name="task" placeholder="enter task" required>
                     <button type="submit" id="addtask" autocomplete="off" class="addtask">+</button>
                 </div>
         </form>
