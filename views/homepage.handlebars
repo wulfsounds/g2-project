@@ -1,0 +1,222 @@
+{{! Emily - this is hardcoded for now so you can work on styling the page whenever. Feel free to change anything.
+
+Once a user creates an account, each col/card will be dynamically created using the #each helper function (see bottom for reference) }}
+
+<div class="list-container">
+
+            <div class="col">
+                <div class="card">
+                    <div class="box card-header">
+                        <h3>Monday</h3>
+                    </div>
+                    <div class="box card-body">
+                        <div class="list-row">
+                            <input type="checkbox">
+                            <p>walk the dog</p>
+                        </div>
+                        <div class="list-row">
+                            <input type="checkbox">
+                            <p>drink water</p>
+                        </div>
+                        <div class="list-row">
+                            <input type="checkbox">
+                            <p>go to bathroom</p>
+                        </div>
+                    </div>
+                    <form>
+                        <input type="text" name="task" placeholder="enter task">
+                        <button type="submit" name="submit-task" autocomplete="off" class="task-button">+</button>
+                    </form>
+                </div>
+            </div> 
+
+            <div class="col">
+                <div class="card">
+                    <div class="box card-header">
+                        <h3>Tuesday</h3>
+                    </div>
+                    <div class="box card-body">
+                        {{!-- <div class="list-row">
+                            <input type="checkbox">
+                            <p>walk the dog</p>
+                        </div>
+                        <div class="list-row">
+                            <input type="checkbox">
+                            <p>drink water</p>
+                        </div>
+                        <div class="list-row">
+                            <input type="checkbox">
+                            <p>go to bathroom</p>
+                        </div> --}}
+                    </div>
+                    <form>
+                        <input type="text" name="task" placeholder="enter task">
+                        <button type="submit" name="submit-task" autocomplete="off" class="task-button">+</button>
+                    </form>
+                </div>
+            </div>   
+
+            <div class="col">
+                <div class="card">
+                    <div class="box card-header">
+                        <h3>Wednesday</h3>
+                    </div>
+                    <div class="box card-body">
+                        {{!-- <div class="list-row">
+                            <input type="checkbox">
+                            <p>walk the dog</p>
+                        </div>
+                        <div class="list-row">
+                            <input type="checkbox">
+                            <p>drink water</p>
+                        </div>
+                        <div class="list-row">
+                            <input type="checkbox">
+                            <p>go to bathroom</p>
+                        </div> --}}
+                    </div>
+                    <form>
+                        <input type="text" name="task" placeholder="enter task">
+                        <button type="submit" name="submit-task" autocomplete="off" class="task-button">+</button>
+                    </form>
+                </div>
+            </div>   
+
+            <div class="col">
+                <div class="card">
+                    <div class="box card-header">
+                        <h3>Thursday</h3>
+                    </div>
+                    <div class="box card-body">
+                        {{!-- <div class="list-row">
+                            <input type="checkbox">
+                            <p>walk the dog</p>
+                        </div>
+                        <div class="list-row">
+                            <input type="checkbox">
+                            <p>drink water</p>
+                        </div>
+                        <div class="list-row">
+                            <input type="checkbox">
+                            <p>go to bathroom</p>
+                        </div> --}}
+                    </div>
+                    <form>
+                        <input type="text" name="task" placeholder="enter task">
+                        <button type="submit" name="submit-task" autocomplete="off" class="task-button">+</button>
+                    </form>
+                </div>
+            </div>   
+
+            <div class="col">
+                <div class="card">
+                    <div class="box card-header">
+                        <h3>Friday</h3>
+                    </div>
+                    <div class="box card-body">
+                        {{!-- <div class="list-row">
+                            <input type="checkbox">
+                            <p>walk the dog</p>
+                        </div>
+                        <div class="list-row">
+                            <input type="checkbox">
+                            <p>drink water</p>
+                        </div>
+                        <div class="list-row">
+                            <input type="checkbox">
+                            <p>go to bathroom</p>
+                        </div> --}}
+                    </div>
+                    <form>
+                        <input type="text" name="task" placeholder="enter task">
+                        <button type="submit" name="submit-task" autocomplete="off" class="task-button">+</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="box card-header">
+                        <h3>Saturday</h3>
+                    </div>
+                    <div class="box card-body">
+                        {{!-- <div class="list-row">
+                            <input type="checkbox">
+                            <p>walk the dog</p>
+                        </div>
+                        <div class="list-row">
+                            <input type="checkbox">
+                            <p>drink water</p>
+                        </div>
+                        <div class="list-row">
+                            <input type="checkbox">
+                            <p>go to bathroom</p>
+                        </div> --}}
+                    </div>
+                    <form>
+                        <input type="text" name="task" placeholder="enter task">
+                        <button type="submit" name="submit-task" autocomplete="off" class="task-button">+</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="box card-header">
+                        <h3>Sunday</h3>
+                    </div>
+                    <div class="box card-body">
+                        {{!-- <div class="list-row">
+                            <input type="checkbox">
+                            <p>walk the dog</p>
+                        </div>
+                        <div class="list-row">
+                            <input type="checkbox">
+                            <p>drink water</p>
+                        </div>
+                        <div class="list-row">
+                            <input type="checkbox">
+                            <p>go to bathroom</p>
+                        </div> --}}
+                    </div>
+                    <form>
+                        <input type="text" name="task" placeholder="enter task">
+                        <button type="submit" name="submit-task" autocomplete="off" class="task-button">+</button>
+                    </form>
+                </div>
+            </div>         
+
+</div>
+
+{{> widgets}}
+
+
+
+{{!-- {{#each lists as |list|}}
+
+            <div class="col">
+                <div class="card">
+                    <div class="box card-header">
+                        <h3>{{list.list_date}}</h3> 
+                    </div>
+                    <div class="box card-body">
+
+                        {{#if list.tasks.length}}
+                            {{#each list.tasks as |task|}}
+      
+                                    <div class="list-row">
+                                        <input type="checkbox">
+                                        <p>{{task.task}}</p>
+                                    </div>
+                            {{/each}}
+                        {{/if}}
+
+                    </div>
+                    <form>
+                        <input type="text" name="task" placeholder="enter task">
+                        <button type="submit" name="submit-task" autocomplete="off" class="task-button">+</button>
+                    </form>
+                </div>
+            </div>  
+
+{{/each}} --}}
