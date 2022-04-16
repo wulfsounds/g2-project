@@ -38,6 +38,24 @@ router.get('/', async (req, res) => {
 
 });
 
+// GET culinary experience
+// router.get('/culexp/:id', async (req, res) => {
+
+//   try {
+//       const newCulExp = await Category.findByPk(req.params.id, {
+//         include: [ { model: Recipe}, { model: Wine}, { model: Playlist}  ],
+//       });
+//       const culExp = newCulExp.get({ plain: true });
+
+//       res.json(culExp);
+      
+//     } catch (err) {
+//       console.log(err);
+//       res.status(500).json(err);
+//     }
+    
+// });
+
 // get login page
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {

@@ -1,12 +1,30 @@
 const router = require('express').Router();
 const { User, Category, Recipe, Wine, Playlist } = require('../../models');
 
-// get edit list page
-router.get('/:id', async (req, res) => {
+// GET culinary experience
+router.get('/culexp/:id', async (req, res) => {
 
     try {
         const newCulExp = await Category.findByPk(req.params.id, {
-          include: [ { model: Recipe}, { model: Wine}, { model: Playlist}  ],
+          include: [ 
+            { model: Recipe,
+              attributes: [
+                'id',
+                'recipe_name',
+                'recipe_link',
+            ]}, 
+            { model: Wine,
+              attributes: [
+                'id',
+                'wine_name',
+              ]}, 
+            { model: Playlist, 
+              attributes: [
+                'id',
+                'playlist_name',
+                'playlist_link',
+              ]}  
+          ],
         });
         const culExp = newCulExp.get({ plain: true });
 
