@@ -2,13 +2,13 @@ const router = require('express').Router();
 const { Category } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// CREATE new category
-router.post('/', withAuth, async (req, res) => {
+// CREATE new category (removed withAuth for testing)
+router.post('/', async (req, res) => {
 
   try {
     const newCategory = await Category.create({
       ...req.body,
-      user_id: 4, // change this to req.session.user_id when login functionality is ready
+      // user_id: 4, // change this to req.session.user_id when login functionality is ready
     });
 
     res.status(200).json(newCategory);
@@ -20,13 +20,13 @@ router.post('/', withAuth, async (req, res) => {
     
 });
 
-// DELETE existing category
-router.delete('/:id', withAuth, async (req, res) => {
+// DELETE existing category (removed withAuth for testing)
+router.delete('/:id', async (req, res) => {
   try {
     const categoryData = await Category.destroy({
       where: {
         id: req.params.id,
-        user_id: req.session.user_id,
+        // user_id: req.session.user_id,
       },
     });
 

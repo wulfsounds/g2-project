@@ -3,13 +3,13 @@ const { Wine } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 
-// CREATE new wine
-router.post('/', withAuth, async (req, res) => {
+// CREATE new wine (removed withAuth for testing)
+router.post('/', async (req, res) => {
 
   try {
     const newWine = await Wine.create({
       ...req.body,
-      user_id: req.session.user_id,
+      // user_id: req.session.user_id,
     });
 
     res.status(200).json(newWine);
@@ -21,13 +21,13 @@ router.post('/', withAuth, async (req, res) => {
     
 });
 
-// DELETE existing wine
-router.delete('/:id', withAuth, async (req, res) => {
+// DELETE existing wine (removed withAuth for testing)
+router.delete('/:id', async (req, res) => {
   try {
     const wineData = await Wine.destroy({
       where: {
         id: req.params.id,
-        user_id: req.session.user_id,
+        // user_id: req.session.user_id,
       },
     });
 
