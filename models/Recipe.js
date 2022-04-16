@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../../config/connection');
+const sequelize = require('../config/connection');
 // Initialize Product model (table) by extending off Sequelize's Model class
 class Recipe extends Model {}
 
@@ -27,6 +27,13 @@ Recipe.init(
         model: 'category',
         key: 'id',
         unique: false
+      }
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+          model: 'user',
+          key: 'id',
       }
     },
   },

@@ -15,28 +15,35 @@ Category.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-    recipe_id: {
+    // recipe_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: 'recipe',
+    //     key: 'id',
+    //     unique: false
+    //   }
+    // },
+    // wine_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: 'wine',
+    //     key: 'id',
+    //     unique: false
+    //   }
+    // },
+    // playlist_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: 'playlist',
+    //     key: 'id',
+    //     unique: false
+    //   }
+    // },
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'category',
-        key: 'id',
-        unique: false
-      }
-    },
-    wine_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'category',
-        key: 'id',
-        unique: false
-      }
-    },
-    playlist_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'category',
-        key: 'id',
-        unique: false
+          model: 'user',
+          key: 'id',
       }
     },
   },

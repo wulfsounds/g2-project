@@ -22,17 +22,17 @@ Wine.belongsTo(Category, {
 
 // Category hasMany Models
 Category.hasMany(Recipe, {
-  foreignKey: 'recipe_id',
+  foreignKey: 'category_id',
   onDelete: 'CASCADE',
 });
 
 Category.hasMany(Playlist, {
-  foreignKey: 'playlist_id',
+  foreignKey: 'category_id',
   onDelete: 'CASCADE', 
 });
 
 Category.hasMany(Wine, {
-  foreignKey: 'wine_id',
+  foreignKey: 'category_id',
   onDelete: 'CASCADE',
 });
 
