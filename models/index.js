@@ -36,20 +36,15 @@ Category.hasMany(Wine, {
   onDelete: 'CASCADE',
 });
 
-// May need another model/seed set that combines culinary experiences to give user ownership.
-  // A user can have many culinary experiences (User.hasMany(CulExp))
-  // These culinary experiences belong to the user (CulExp.belongsTo(User))
-  // Culinary experiences have many categories (CulExp.hasMany(Category))
+//User's culinary experience associations
+User.hasMany(Category, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
 
-// Borrowed from unit 14-MVC mini_project
-// User.hasMany(Project, {
-//   foreignKey: 'user_id',
-//   onDelete: 'CASCADE'
-// });
-
-// Project.belongsTo(User, {
-//   foreignKey: 'user_id'
-// });
+Category.belongsTo(User, {
+  foreignKey: 'user_id'
+});
 
 
 

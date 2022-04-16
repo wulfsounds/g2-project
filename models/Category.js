@@ -15,6 +15,30 @@ Category.init(
       type: DataTypes.STRING,
       allowNull: false
     },
+    recipe_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'category',
+        key: 'id',
+        unique: false
+      }
+    },
+    wine_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'category',
+        key: 'id',
+        unique: false
+      }
+    },
+    playlist_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'category',
+        key: 'id',
+        unique: false
+      }
+    },
   },
   {
     sequelize,
