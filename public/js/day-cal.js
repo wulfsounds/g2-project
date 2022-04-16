@@ -20,7 +20,6 @@ $(".container").on("click", ".saveBtn", function () {
 	
 	//Breakpoints
 
-
 	pushLocal();
 });
 
