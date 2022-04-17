@@ -1,4 +1,4 @@
-img {
+.hero {
     width: 100%;
     object-fit: cover;
     object-position: 10% 20%;
@@ -21,13 +21,12 @@ img {
     color: #CC88B7;
   }
   
-  #title-head {
+  .thyme-head {
     /* Sizing */
+    width: 12%;
     margin: 0;
     padding: 8px;
-  
-    /* Color */
-    color: #000;
+
   }
   
   .thyme-nav {
@@ -45,4 +44,15 @@ img {
   a:link a:visited {
     text-decoration: none;
     color: #000;
+  }
+
+  footer {
+    display: flex;
+    /* position: relative; */
+    justify-content: center;
+    align-items: flex-end;
+    height: 20px;
+    top: 20vh;
+  
+    font-size: 30px;
   }
