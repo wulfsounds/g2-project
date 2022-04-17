@@ -9,11 +9,11 @@ router.post('/', async (req, res) => {
 
     // // check if password and confirm password inputs match
     // if (req.body.password === req.body.confirmpw) {
-    //   const dbUserData = await User.create({
-    //     username: req.body.username,
-    //     email: req.body.email,
-    //     password: req.body.password,
-    //   });
+      const dbUserData = await User.create({
+        username: req.body.username,
+        email: req.body.email,
+        password: req.body.password,
+      });
 
     // } else {
     //   alert('Passwords do not match!')
