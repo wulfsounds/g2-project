@@ -5,7 +5,7 @@ const { User, List, Task } = require('../models');
 router.get('/', async (req, res) => {
 
     try {
-      const userData = await User.findByPk(6, {
+      const userData = await User.findByPk(8, {
         attributes: { exclude: ['password'] },
         include: [
           { model: List,
