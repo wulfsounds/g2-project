@@ -46,7 +46,7 @@ async function postWeather() {
     let temp = weather.current.temp;
     console.log(icon, temp);
     // Displays weather icon
-    const weatherText = document.querySelector(".weather");
+    const weatherText = document.querySelector(".realTemp");
     let img = document.createElement("img");
 	img.setAttribute(`src`, `http://openweathermap.org/img/wn/${icon}@2x.png`);
 	img.setAttribute("alt", "weather-icon");
@@ -55,5 +55,52 @@ async function postWeather() {
 
 
     // Displays temp (in Fº)
-    $('.temp').text(`${Math.floor(temp)}º`)
+    $('.local').text(`${Math.floor(temp)}º`)
+
+    fiveDay();
 }
+
+
+async function fiveDay() {
+	console.log("fiveDay OK");
+	console.log(weather);
+	let i = 0;
+	const weatherStats = [weather.daily.slice(1, 6)];
+
+	weather.daily.slice(1, 6).forEach(function (weatherObject) {
+		let icon = weather.daily[i].weather[0].icon;
+
+		let dayBox = document.createElement("div");
+		dayBox.setAttribute("class", "col-2 day-box");
+		let forecast = document.createElement("div");
+		forecast.setAttribute("class", "forecast");
+		let dayDate = document.createElement("p");
+		dayDate.setAttribute("class", "day-date");
+		let dayIcon = document.createElement("img");
+		dayIcon.setAttribute(
+			`src`,
+			`http://openweathermap.org/img/wn/${icon}@2x.png`
+		);
+		let dayTemp = document.createElement("p");
+		dayTemp.setAttribute("class", "day-temp");
+		let dayWind = document.createElement("p");
+		dayWind.setAttribute("class", "day-wind");
+		let dayHumid = document.createElement("p");
+		dayHumid.setAttribute("class", "day-humid");
+		let dayUVI = document.createElement("p");
+		dayUVI.setAttribute("class", "day-uvi");
+		let dayBadge = document.createElement("span");
+		dayBadge.setAttribute("class", "day-badge");
+
+		$(".five-day").append(dayBox);
+		$(dayBox).append(forecast);
+		$(forecast).append(dayDate);
+		$(forecast).append(dayIcon);
+		$(forecast).append(dayTemp);
+		$(dayTemp).text(`Temp: ${Math.floor(weather.daily[i].temp.day)}`);
+
+		i++;
+	});
+}
+
+

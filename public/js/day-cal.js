@@ -8,10 +8,10 @@ let btnIdx = 0;
 // let appt = document.querySelectorAll('#textarea') // added for debugging
 
 // Display Current Date and Time
-$("h2").text(`${currentDate} ${currentTime}`);
+$("h3").text(`${currentDate} ${currentTime}`);
 
 // Activate planner and update with local storage  // DEBUG: #textarea is clearing on page refresh
-$(".container").on("click", ".saveBtn", function () {
+$(".time-blocks").on("click", ".saveBtn", function () {
 	getLocal();
 	btnIdx = $(this).index(".saveBtn");
 
@@ -44,18 +44,18 @@ function getLocal() {
 // let localItems = localStorage.getItem('appointment') // added for debugging
 // appt.values = localStorage.getItem('appointment') // added for debugging
 
-// Colorizes the container based on the time of day.
-$(".container")
+// Colorizes the time-block container based on the time of day.
+$(".time-blocks")
 	.children()
 	.each((i, e) => {
 		// Current time based on a 24-hour clock
 		let currentTime = moment().format("H");
 		// past time
-		if (i + 9 < currentTime) {
+		if (i < currentTime) {
 			$(e).css("background-color", "#8ce4f8");
 		}
 		// future time
-		else if (i + 9 > currentTime) {
+		else if (i > currentTime) {
 			$(e).css("background-color", "#41a436");
 		}
 		// present time
@@ -68,7 +68,7 @@ $(".container")
 		// Variables for Night Theme
 	});
 
-$(".container")
+$(".time-blocks")
 	.children()
 	.find("#textarea")
 	.each((i, e) => $(e).val(dayTrip[i]));
