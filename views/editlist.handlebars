@@ -1,0 +1,31 @@
+<div>
+
+    {{!-- list title/day --}}
+    <div>
+        <h3>{{list.list_date}}</h3>
+    </div>
+
+    {{!-- list body --}}
+    <div>
+        <form id="editlist">
+            {{#if list.tasks}}
+                {{#each list.tasks as |task|}}
+                <div>
+                    <input name="task" type="text" value="{{task.task}}" required>
+                    <button data-id="{{task.id}}" class="updatetask" type="submit">update</button>
+                    <button id="{{task.id}}" class="deletetask" type="submit">delete</button>
+                </div>
+                {{/each}}
+            {{/if}}
+
+                {{!-- ADD TASK INPUT AND BUTTON --}}
+                <div>
+                    <input type="text" name="task" placeholder="enter task" required>
+                    <button type="submit" id="addtask" autocomplete="off" class="addtask">+</button>
+                </div>
+        </form>
+    </div>
+
+</div>
+
+<script src="/js/edit-list.js"></script>

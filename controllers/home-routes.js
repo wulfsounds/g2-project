@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, List, Task } = require('../models');
+const { User, List, Task, Category, Recipe, Wine, Playlist } = require('../models');
 
 // get weekly view page
 router.get('/', async (req, res) => {
@@ -20,17 +20,22 @@ router.get('/', async (req, res) => {
       const user = userData.get({ plain: true });
       console.log(user);
 
+      // const newCulExp = await Category.findByPk(req.params.id, {
+      //   include: [ { model: Recipe, Wine, Playlist } ],
+      // });
+      // const culExp = newCulExp.get({ plain: true });
+
       res.render('homepage', {
-        ...user,
+        ...user, 
+        // ...culExp,
         loggedIn: req.session.loggedIn,
       });
-
       
     } catch (err) {
     console.log(err);
     res.status(500).json(err);
     }
-  
+
 });
 
 // get login page
@@ -45,4 +50,4 @@ router.get('/login', (req, res) => {
 
 
 
-module.exports = router;
+module.exports = router; 
