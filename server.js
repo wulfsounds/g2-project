@@ -31,6 +31,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
+// app.get('/', (req,res) => {
+//   res.render(path.join(__dirname, 'homework/projects/g2-project/public/html/splash.html'))
+// })
+
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
