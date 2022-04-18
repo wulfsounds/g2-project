@@ -16,7 +16,13 @@
         <h2>Weekly Forecast</h2>
         <input type="text">
         <div class="weather-body">
-            <div class="weather-day">
+            {{!-- Adding OpenWeather API from Dev --}}
+                <div class="weather-day">
+                  <h4>Weekly</h4>
+                  <p class="five-day"></p>
+                </div>
+                {{!-- template from original weekly build by Neema --}}
+            {{!-- <div class="weather-day">
                 <h4>Monday</h4>
                 <img src="./img/img_209726.png" width="30px" alt="">
                 <p>50F</p>
@@ -40,7 +46,7 @@
                 <h4>Friday</h4>
                 <img src="./img/img_209726.png" width="30px" alt="">
                 <p>50F</p>
-            </div>
+            </div> --}}
         </div>
     </div>
     <div class="events-widget widget">
