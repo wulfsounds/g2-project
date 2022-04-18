@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Thyme</title>
     {{!-- GOOGLE FONTS --}}
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Belleza"/>
     {{!-- CUSTOM CSS --}}
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    {{!-- {{#if loggedIn}} --}}
+    {{#if loggedIn}}
     <header>
         <h1>THYME</h1>
         <nav>
@@ -23,20 +23,24 @@
                 <button>profile/preferences</button>
                 <button> < </button>
                 <button> > </button>
-                <button>Logout</button>
+                <button id="logout-btn">Logout</button>
             </div>
         </nav>
     </header>
-    {{!-- {{else}}
+    {{else}}
     <header>
         <h1>THYME</h1>
     </header>
-    {{/if}} --}}
+    {{/if}}
 
     <main>
 
         {{{body}}}
     
     </main>
+
+    {{#if loggedIn}}
+        <script src="/js/login/logout.js"></script>
+    {{/if}}
 </body>
 </html>
