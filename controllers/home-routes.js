@@ -6,7 +6,7 @@ const { User, List, Day, Task, Category, Recipe, Wine, Playlist } = require('../
 router.get('/day', async (req, res) => {
 
   try {
-    const userData = await User.findByPk(15, {
+    const userDay = await User.findByPk(15, {
       attributes: { exclude: ['password'] },
       include: [
         { model: Day,
@@ -21,11 +21,11 @@ router.get('/day', async (req, res) => {
       ],
     });
   
-    const user = userData.get({ plain: true });
-    console.log(user);
+    const wholeDay = userDay.get({ plain: true });
+    // console.log(user);
 
     res.render('dayCal', {
-      ...user, 
+      ...wholeDay, 
       // ...culExp,
       loggedIn: req.session.loggedIn,
     });

@@ -21,24 +21,24 @@ router.post('/:id', async (req, res) => {
 });
 
 // UPDATE task
-router.put('/:id/:taskId', async (req, res) => {
-  try {
-      const updatedTask = await Task.update({
-        task: req.body.task,
-      },
-      {
-        where: {
-          id: req.params.taskId
-        }
-      });
+// router.put('/:id/:taskId', async (req, res) => {
+//   try {
+//       const updatedTask = await Task.update({
+//         task: req.body.task,
+//       },
+//       {
+//         where: {
+//           id: req.params.taskId
+//         }
+//       });
     
-      res.json(updatedTask);
-      } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-      }
+//       res.json(updatedTask);
+//       } catch (err) {
+//         console.log(err);
+//         res.status(500).json(err);
+//       }
   
-});
+// });
 
 // DELETE tesk
 router.delete('/:id/:taskId', async (req, res) => {
