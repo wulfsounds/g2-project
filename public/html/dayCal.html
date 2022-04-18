@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/style.css">
+  <title>thyme</title>
+</head>
+
+<body>
+  <header>
+    <h1>thyme</h1>
+    <nav>
+      <div>
+        <p class="date"></p>
+      </div>
+      <div>
+        <button>profile/preferences</button>
+        <button>
+          < </button>
+            <button> > </button>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="list-container" style="flex-wrap: wrap;">
+      <div class="col">
+        <div class="card">
+          <!-- keep this for Date -->
+          <div class="box card-header col-10">
+            <h3 class="currentTime"></h3>
+          </div>
+
+          <div class="time-blocks">
+            <!-- Timeblocks go here -->
+            <div id="hour" class="row nine">
+              <div id="time" class="col-1 hour"><span class="hour-text">12 AM</span></div>
+              <textarea id="textarea" class="col-10 text"></textarea>
+              <button id="saveBtn" class="saveBtn col-1">SAVE</button>
+            </div>
+
+            <div id="hour" class="row nine">
+              <div id="time" class="col-1 hour"><span class="hour-text">1 AM</span></div>
+              <textarea id="textarea" class="col-10 text"></textarea>
+              <button id="saveBtn" class="saveBtn col-1">SAVE</button>
+            </div>
+
+            <div id="hour" class="row">
+              <div id="time" class="col-1 hour"><span class="hour-text">2 AM</span></div>
+              <textarea id="textarea" class="col-10 text"></textarea>
+              <button id="saveBtn" class="saveBtn col-1">SAVE</button>
+            </div>
+
+            <div id="hour" class="row">
+              <div id="time" class="col-1 hour"><span class="hour-text">3 AM</span></div>
+              <textarea id="textarea" class="col-10 text"></textarea>
+              <button id="saveBtn" class="saveBtn col-1">SAVE</button>
+            </div>
+
+            <div id="hour" class="row">
+              <div id="time" class="col-1 hour"><span class="hour-text">4 AM</span></div>
+              <textarea id="textarea" class="col-10 text"></textarea>
+              <button id="saveBtn" class="saveBtn col-1">SAVE</button>
+            </div>
+
+            <div id="hour" class="row">
+              <div id="time" class="col-1 hour"><span class="hour-text">5 AM</span></div>
+              <textarea id="textarea" class="col-10 text"></textarea>
+              <button id="saveBtn" class="saveBtn col-1">SAVE</button>
+            </div>
+
+            <div id="hour" class="row">
+              <div id="time" class="col-1 hour"><span class="hour-text">6 AM</span></div>
+              <textarea id="textarea" class="col-10 text"></textarea>
+              <button id="saveBtn" class="saveBtn col-1">SAVE</button>
+            </div>
+
+            <div id="hour" class="row">
+              <div id="time" class="col-1 hour"><span class="hour-text">7 AM</span></div>
+              <textarea id="textarea" class="col-10 text"></textarea>
+              <button id="saveBtn" class="saveBtn col-1">SAVE</button>
+            </div>
+
+            <div id="hour" class="row">
+              <div id="time" class="col-1 hour"><span class="hour-text">8 AM</span></div>
+              <textarea id="textarea" class="col-10 text"></textarea>
+              <button id="saveBtn" class="saveBtn col-1"><span class="btn-text">SAVE</span></button>
+            </div>
+
+            <div id="hour" class="row five">
+              <div id="time" class="col-1 hour"><span class="hour-text">9 AM</span></div>
+              <textarea id="textarea" class="col-10 text"></textarea>
+              <button id="saveBtn" class="saveBtn col-1"><span class="btn-text">SAVE</span></button>
+            </div>
+
+            <div id="hour" class="row five">
+              <div id="time" class="col-1 hour"><span class="hour-text">10 AM</span></div>
+              <textarea id="textarea" class="col-10 text"></textarea>
+              <button id="saveBtn" class="saveBtn col-1"><span class="btn-text">SAVE</span></button>
+            </div>
+
+            <div id="hour" class="row nine">
+              <div id="time" class="col-1 hour"><span class="hour-text">11 PM</span></div>
+              <textarea id="textarea" class="col-10 text"></textarea>
+              <button id="saveBtn" class="saveBtn col-1">SAVE</button>
+            </div>
+
+            <div id="hour" class="row">
+              <div id="time" class="col-1 hour"><span class="hour-text">12 PM</span></div>
+              <textarea id="textarea" class="col-10 text"></textarea>
+              <button id="saveBtn" class="saveBtn col-1">SAVE</button>
+            </div>
+
+            <div id="hour" class="row">
+              <div id="time" class="col-1 hour"><span class="hour-text">1 PM</span></div>
+              <textarea id="textarea" class="col-10 text"></textarea>
+              <button id="saveBtn" class="saveBtn col-1">SAVE</button>
+            </div>
+
+            <div id="hour" class="row">
+              <div id="time" class="col-1 hour"><span class="hour-text">2 PM</span></div>
+              <textarea id="textarea" class="col-10 text"></textarea>
+              <button id="saveBtn" class="saveBtn col-1">SAVE</button>
+            </div>
+
+            <div id="hour" class="row">
+              <div id="time" class="col-1 hour"><span class="hour-text">3 PM</span></div>
+              <textarea id="textarea" class="col-10 text"></textarea>
+              <button id="saveBtn" class="saveBtn col-1">SAVE</button>
+            </div>
+
+            <div id="hour" class="row">
+              <div id="time" class="col-1 hour"><span class="hour-text">4 PM</span></div>
+              <textarea id="textarea" class="col-10 text"></textarea>
+              <button id="saveBtn" class="saveBtn col-1">SAVE</button>
+            </div>
+
+            <div id="hour" class="row">
+              <div id="time" class="col-1 hour"><span class="hour-text">5 PM</span></div>
+              <textarea id="textarea" class="col-10 text"></textarea>
+              <button id="saveBtn" class="saveBtn col-1">SAVE</button>
+            </div>
+
+            <div id="hour" class="row">
+              <div id="time" class="col-1 hour"><span class="hour-text">6 PM</span></div>
+              <textarea id="textarea" class="col-10 text"></textarea>
+              <button id="saveBtn" class="saveBtn col-1"><span class="btn-text">SAVE</span></button>
+            </div>
+
+            <div id="hour" class="row five">
+              <div id="time" class="col-1 hour"><span class="hour-text">7 PM</span></div>
+              <textarea id="textarea" class="col-10 text"></textarea>
+              <button id="saveBtn" class="saveBtn col-1"><span class="btn-text">SAVE</span></button>
+            </div>
+
+            <div id="hour" class="row five">
+              <div id="time" class="col-1 hour"><span class="hour-text">8 PM</span></div>
+              <textarea id="textarea" class="col-10 text"></textarea>
+              <button id="saveBtn" class="saveBtn col-1"><span class="btn-text">SAVE</span></button>
+            </div>
+
+            <div id="hour" class="row">
+              <div id="time" class="col-1 hour"><span class="hour-text">9 PM</span></div>
+              <textarea id="textarea" class="col-10 text"></textarea>
+              <button id="saveBtn" class="saveBtn col-1">SAVE</button>
+            </div>
+
+            <div id="hour" class="row">
+              <div id="time" class="col-1 hour"><span class="hour-text">10 PM</span></div>
+              <textarea id="textarea" class="col-10 text"></textarea>
+              <button id="saveBtn" class="saveBtn col-1"><span class="btn-text">SAVE</span></button>
+            </div>
+
+            <div id="hour" class="row five">
+              <div id="time" class="col-1 hour"><span class="hour-text">11 PM</span></div>
+              <textarea id="textarea" class="col-10 text"></textarea>
+              <button id="saveBtn" class="saveBtn col-1"><span class="btn-text">SAVE</span></button>
+            </div>
+          </div>
+          <div class="widgets-container container">
+            <div class="recipes-widget widget">
+              <h2>Recipes for the week</h2>
+              <div class="recipes-body widget-body">
+                <a href="">Spaghetti w/ meatballs</a>
+                <a href="">Oven-roasted Turkey</a>
+                <a href="">Black Bean Burger</a>
+                <a href="">Deep Fried Butter</a>
+                <a href="">Black Bean Burger</a>
+                <a href="">Deep Fried Butter</a>
+                <button>Get different recipes</button>
+              </div>
+            </div>
+            <div class="weather-widget widget">
+              <h2 class="weather-head">Weekly Forecast
+                <span class="realTemp"></span><span class="local"></span>
+              </h2>
+              <div class="weather-body">
+                <!-- OpenWeather 5-Day -->
+               
+                <div class="weather-day">
+                  <h4>Weekly</h4>
+                  <p class="five-day"></p>
+                </div>
+              </div>
+            </div>
+            <div class="events-widget widget">
+              <h2>Events during the week</h2>
+              <div class="events-body widget-body">
+                <a href="">April 14 - race</a>
+                <a href="">April 15 - concert</a>
+                <a href="">April 14 - race</a>
+                <a href="">April 15 - concert</a>
+                <a href="">April 14 - race</a>
+                <a href="">April 15 - concert</a>
+                <button>See more events near me</button>
+              </div>
+            </div>
+            <div class="events-widget widget">
+              <h2>Some other random widget</h2>
+              <div class="events-body widget-body">
+                <a href="">April 14 - race</a>
+                <a href="">April 15 - concert</a>
+                <a href="">April 14 - race</a>
+                <a href="">April 15 - concert</a>
+                <a href="">April 14 - race</a>
+                <a href="">April 15 - concert</a>
+                <button>See more events near me</button>
+              </div>
+            </div>
+          </div>
+  </main>
+  <!-- current JS used for dayCal -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="../js/OpenWeatherAPI/weather.js"></script>
+  <script src="../js/day-cal.js"></script>
+</body>
+
+</html>
