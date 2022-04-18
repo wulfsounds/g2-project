@@ -12,12 +12,19 @@ html,body {
     height: 100%;
     place-items: center;
     margin-top: 10%;
+    width: 100%;
     background: -webkit-linear-gradient(left, #48631a,#86a451);
 }
 
 header {
     display: flex;
     align-items: flex-start;
+}
+
+.login-thyme {
+    display: flex;
+    justify-content: center;
+    margin-left: -2rem;
 }
 
 .wrapper {
@@ -132,7 +139,7 @@ input[type="radio"] {
 }
 
 .inner-form form .field input:focus {
-    border-color: #b14885;
+    border-color: #c94090;
 }
 
 .inner-form form .forgot-password {
@@ -142,7 +149,7 @@ input[type="radio"] {
 
 .inner-form form .forgot-password a,
 .inner-form form .signup-link a {
-    color: #CC88B7;
+    color: #df96c8;
     text-decoration: none;
 }
 
