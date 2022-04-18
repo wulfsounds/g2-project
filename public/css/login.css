@@ -161,6 +161,7 @@ input[type="radio"] {
 .inner-form form .forgot-password a:hover,
 .inner-form form .signup-link a:hover {
     text-decoration: underline;
+    color: #d144a5;
 }
 
 .inner-form form .field input[type="submit"] {

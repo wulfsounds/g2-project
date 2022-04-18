@@ -65,7 +65,12 @@ nav button {
   background: #48631a;
   border: none;
   border-radius: 0.2rem;
-  padding: 0.4rem;
+  padding: 0.6rem;
+  
+}
+
+nav button:hover {
+  background-color: #354912;
 }
 
 .main {
@@ -76,7 +81,7 @@ nav button {
 
 .list-container {
   min-height: 31.25rem;
-  margin: 2rem;
+  margin: 1.5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -115,6 +120,16 @@ nav button {
   font-size: 1.4rem;
 }
 
+.card-header a {
+  text-decoration: none;
+  color: #86a451;
+}
+
+.card-header a:hover {
+  /* text-decoration: underline; */
+  color: #df75aa;
+}
+
 /* task backgroud colors */
 .list-row {
   min-height: 1.875rem;
@@ -126,7 +141,7 @@ nav button {
 
 input:checked + p {
   text-decoration: line-through;
-  text-decoration-color: #a683e3;
+  text-decoration-color: #df75aa;
 }
 
 input[type="checkbox"] {
@@ -178,7 +193,7 @@ input[type="text"] {
 
 input[type="text"]:focus {
   outline: none;
-  box-shadow: inset 0 -0.1875rem 0 0 #a683e3;
+  box-shadow: inset 0 -0.1875rem 0 0 #df75aa;
 }
 
 /* enter task text on enter box */
@@ -192,7 +207,7 @@ input[type="text"]:focus {
 /* entire widget container */
 .widgets-container {
   display: flex;
-  margin: 2rem;
+  margin: 1.75rem;
   text-align: center;
   line-height: 1.5rem;
   /* background: #b4a7d6; */
@@ -210,10 +225,15 @@ input[type="text"]:focus {
 .widgets-container button {
   background: #48631a;
   color: #fff;
+  font-size: 1rem;
   border-radius: 0.2rem;
   border: none;
-  padding: 0.25rem;
-  margin-top: 0.25rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+
+.widgets-container button:hover {
+  background-color: #354912;
 }
 
 .widget {
@@ -231,6 +251,11 @@ input[type="text"]:focus {
   /* padding-left: .2rem; */
   text-decoration: none;
   color: #86a451;
+}
+
+.widget-body a:hover {
+  /* text-decoration: underline; */
+  color: #df75aa;
 }
 
 /* .recipes-widget h2 {
@@ -258,16 +283,15 @@ input[type="text"]:focus {
     color: #fff;
     padding: .2rem;
     border-radius: .25rem;
-}
+} */
+
 
 /* OTHER EVENTS WIDGET */
-/* .events-widget h2 {
-    margin-bottom: .15rem;
-    background: #86a451;
-    color: #fff;
-    padding: .2rem;
-    border-radius: .25rem;
-} */
+.events-widget .events-body {
+  padding: .5rem;
+  line-height: 2rem;
+  font-size: 1.25rem;
+}
 
 /* *RESPONSIVE WEB DESIGN */
 /* RESPONSIVE DESIGN BREAKPOINTS
