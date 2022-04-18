@@ -5,6 +5,7 @@ const exphbs = require('express-handlebars');
 
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const helpers = require('./utils/helpers');
 
 const app = express();
@@ -13,13 +14,21 @@ const PORT = process.env.PORT || 3001;
 // Set up sessions
 const sess = {
   secret: 'Super secret secret',
+  cookie: {
+    maxAge: 3600000,
+    httpOnly: true,
+    secure: false,
+    sameSite: 'strict',
+  },
   resave: false,
-  saveUninitialized: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
 };
 
 app.use(session(sess));
 
-//creates a session object and places it in the s
 const hbs = exphbs.create({ helpers });
 
 app.engine('handlebars', hbs.engine);
@@ -31,9 +40,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-// app.get('/', (req,res) => {
-//   res.render(path.join(__dirname, 'homework/projects/g2-project/public/html/splash.html'))
-// })
+// load splash html
+app.get('/splash', (req,res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+
+  res.sendFile(path.join(__dirname, '/public/html/splash.html'))
+})
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
