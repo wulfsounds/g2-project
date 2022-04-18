@@ -6,7 +6,7 @@ const { User, List, Day, Task, Category, Recipe, Wine, Playlist } = require('../
 router.get('/day', async (req, res) => {
 
   try {
-    const userDay = await User.findByPk(15, {
+    const userDay = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
       include: [
         { model: Day,
@@ -26,7 +26,7 @@ router.get('/day', async (req, res) => {
 
     res.render('dayCal', {
       ...wholeDay, 
-      // ...culExp,
+      ...culExp,
       loggedIn: req.session.loggedIn,
     });
     
@@ -38,7 +38,7 @@ router.get('/day', async (req, res) => {
 });
 
 // get weekly view page
-router.get('/', async (req, res) => {
+router.get('/weekly', async (req, res) => {
 
     if (!req.session.loggedIn) {
       res.redirect('/login');
