@@ -21,7 +21,7 @@ router.post('/', async (req, res) => {
 
     // As soon as user creates an account, automatically generate a list for each day (Mon-Sun).. createLists is under utils folder
     if(dbUserData) {
-      console.log(dbUserData);
+      // console.log(dbUserData);
       createLists(dbUserData.id);
     }
     req.session.save(() => {

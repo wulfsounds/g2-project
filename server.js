@@ -29,7 +29,6 @@ const sess = {
 
 app.use(session(sess));
 
-//creates a session object and places it in the s
 const hbs = exphbs.create({ helpers });
 
 app.engine('handlebars', hbs.engine);
@@ -41,6 +40,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
+// load splash html
 app.get('/splash', (req,res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
