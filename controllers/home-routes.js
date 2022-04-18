@@ -5,7 +5,7 @@ const { User, List, Task, Category, Recipe, Wine, Playlist } = require('../model
 router.get('/', async (req, res) => {
 
     try {
-      const userData = await User.findByPk(6, { // change number to req.session.user_id when login functionality is ready
+      const userData = await User.findByPk(15, {
         attributes: { exclude: ['password'] },
         include: [
           { model: List,
