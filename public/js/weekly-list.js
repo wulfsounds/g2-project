@@ -1,13 +1,13 @@
 const handleWeeklyForm = async (event) => {
-    event.preventDefault();
-    event.stopPropagation();
-
     const target = event.target;
-    // console.log(target.tagName);
 
     if (target.tagName === "BUTTON") {
+      event.preventDefault();
+      event.stopPropagation();
+
       addTask(target);
     }
+    
 }
 
 const addTask = async (target) => {
@@ -23,7 +23,7 @@ const addTask = async (target) => {
       });
 
       if (response.ok) {
-        document.location.replace(`/`);
+        document.location.replace(`/weekly`);
       } else {
         alert('Failed to add task.');
       }

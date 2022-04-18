@@ -32,7 +32,7 @@ const addTask = async (target) => {
       });
 
       if (response.ok) {
-        document.location.replace(`/list/${listId}`);
+        document.location.replace(`/weekly/list/${listId}`);
       } else {
         alert('Failed to add task.');
       }
@@ -54,7 +54,7 @@ const updateTask = async (target) => {
       });
 
       if (response.ok) {
-        document.location.replace(`/list/${listId}`);
+        document.location.replace(`/weekly/list/${listId}`);
       } else {
         alert('Failed to update task.');
       }
@@ -73,7 +73,7 @@ const delTask = async (target) => {
     });
 
     if (response.ok) {
-      document.location.replace(`/list/${listId}`);
+      document.location.replace(`/weekly/list/${listId}`);
     } else {
       alert('Failed to delete task.');
     }

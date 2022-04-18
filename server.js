@@ -41,9 +41,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 // load splash html
-app.get('/splash', (req,res) => {
+app.get('/', (req,res) => {
   if (req.session.loggedIn) {
-    res.redirect('/');
+    res.redirect('/weekly');
     return;
   }
 
