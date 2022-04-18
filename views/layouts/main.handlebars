@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thyme</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1,user-scalable=no">
+    <meta name="HandheldFriendly" content="true ">
+    <title>Document</title>
     {{!-- GOOGLE FONTS --}}
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Belleza"/>
     {{!-- CUSTOM CSS --}}
@@ -14,7 +15,8 @@
 <body>
     {{#if loggedIn}}
     <header>
-        <h1>THYME</h1>
+        <img class="thyme-head" src="../img/thyme-header-logo-white.png" alt="thyme logo">
+        {{!-- <h1>THYME</h1> --}}
         <nav>
             <div>
             <p class="today">{{getDate}}</p>
