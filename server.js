@@ -42,6 +42,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 app.get('/splash', (req,res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+
   res.sendFile(path.join(__dirname, '/public/html/splash.html'))
 })
 
