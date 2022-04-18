@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User, List, Task } = require('../models');
 
 // get edit list page
-router.get('/:id', async (req, res) => {
+router.get('/list/:id', async (req, res) => {
 
   if (!req.session.loggedIn) {
     res.redirect('/login');
