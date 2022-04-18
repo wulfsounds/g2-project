@@ -6,6 +6,7 @@ const Playlist = require('./Playlist');
 const Wine = require('./Wine');
 const List = require('./List');
 const Task = require('./Task');
+const Day = require('./Day');
 
 // Models belongsTo Category
 Recipe.belongsTo(Category, {
@@ -75,6 +76,34 @@ Task.belongsTo(User, {
 });
 
 
+// Add Day
+User.hasMany(Day, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+  });
+  
+Day.belongsTo(User, {
+  foreignKey: 'user_id'
+});
+Day.hasMany(Task, {
+  foreignKey: 'day_id',
+  onDelete: 'CASCADE'
+  });
+  
+Task.belongsTo(Day, {
+  foreignKey: 'day_id'
+});
+User.hasMany(Task, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
+  
+Task.belongsTo(User, {
+  foreignKey: 'user_id'
+});
+
+
+
 module.exports = { 
   User,
   Category,
@@ -83,4 +112,5 @@ module.exports = {
   Wine,
   List,
   Task,
+  Day
  };
