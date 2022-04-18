@@ -7,7 +7,7 @@ router.post('/:id', async (req, res) => {
   try {
     const newTask = await Task.create({
       task: req.body.task,
-      user_id: 6, // change this to req.session.user_id when login functionality is ready
+      user_id: 4, // change this to req.session.user_id when login functionality is ready
       list_id: req.params.id
     });
 
