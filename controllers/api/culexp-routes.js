@@ -15,7 +15,7 @@ router.get('/:id', async (req, res) => {
 
         res.json(culExp);
         // Below syntax from 12-Stu_Partials
-        //res.render('culexp', {culExp});
+        //res.render('homepage', {culExp});
         
       } catch (err) {
         console.log(err);
