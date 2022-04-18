@@ -2,42 +2,87 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Belleza, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    /* background: #e06666; using to view containers */
 }
 
+html,body {
+    display: grid;
+    height: 100%;
+    /* place-items: center; */
+    margin-top: 1rem;
+    /* background: #7a2d2d;  using to view containers*/
+    background: -webkit-linear-gradient(left, #48631a,#86a451);
+}
+
+/* full header container */
 header {
     padding: 1rem;
+    margin-left: 1.5rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    /* background: #f6b26b; using to view containers */
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #fff;
 }
 
 nav {
     display: flex;
     align-items: center;
+    /* background: #f9cb9c using to view containers; */
 }
 
 nav div {
     padding: 0 1rem;
+    /* background: #ffe599; */
 }
 
+nav div p {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+/* header buttons */
 nav button {
     font-size: 1.2rem;
+    text-align: center;
+    color: #fff;
+    background: #48631a;
+    border: none;
+    border-radius: .2rem;
+    padding: .4rem;
 }
 
 .main {
     display: flex;
     flex-direction: column;
+    /* background: red; */
 }
 
 .list-container {
     min-height: 500px;
+    margin: 2rem;
     display: flex;
     flex-direction: row;
-
+    justify-content: center;
+    background: #b6d7a8;
+    border-radius: .5rem;
+    padding: 1rem;
+     /* using to view containers */
 }
 
+/* ⬆️ both background same size .col overlaps .list ⬇️*/
+
+/* holds all weekday info */
 .col {
     flex-basis: 16.67%;
+    /* background: #6aa84f; using to view containers */
 }
 
 .box {
@@ -48,8 +93,10 @@ nav button {
     box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
 }
 
+/* List Day heading */
 .card-header {
     /* background-color: #248018; */
+    /* background-color: #70b5c4; */
     text-align: center;
 }
 
@@ -58,11 +105,13 @@ nav button {
     padding: 10px;
 }
 
+/* task backgroud colors */
 .list-row {
     min-height: 30px;
     display: flex;
     align-items: center;
     border-bottom: 1px solid #F1F1F1;
+    /* background: #6fa8dc; */
 }
 
 input:checked+p {
@@ -75,19 +124,24 @@ input[type="checkbox"] {
     opacity: 0.8;
 }
   
+/* all p text */
 p {
     margin: 0;
     padding: 10px;
     font-size: 18px;
     font-weight: 200;
     color: #00204a;
+    /* background: #A683E3; */
 }
 
+/* enter task box */
 form {
     text-align: center;
     margin-left: 20px;
+    /* background: #3d85c6; */
 }
   
+/* little plus button on enter task box */
 .task-button {
     min-height: 30px;
     width: 30px;
@@ -100,6 +154,7 @@ form {
     border-width: 0;
 }
 
+/* all input boxes */
 input[type="text"] {
 text-align: center;
 height: 50px;
@@ -111,11 +166,13 @@ font-weight: 200;
 width: 180px;
 }
 
+
 input[type="text"]:focus {
 outline: none;
 box-shadow: inset 0 -3px 0 0 #A683E3;
 }
 
+/* enter task text on enter box */
 ::placeholder {
 color: grey;
 opacity: 1;
@@ -123,8 +180,30 @@ opacity: 1;
 
 /* WIDGETS */
 
+/* entire widget container */
 .widgets-container {
     display: flex;
+    margin: 2rem;
+    /* text-align: center; */
+    /* background: #b4a7d6; */
+}
+
+.widgets-container h2 {
+    margin-bottom: .15rem;
+    background: #86a451;
+    color: #fff;
+    padding: .2rem;
+    border-radius: .25rem;
+    text-align: center;
+}
+
+.widgets-container button {
+    background: #48631a;
+    color: #fff;
+    border-radius: .2rem;
+    border: none;
+    padding: .25rem;
+    margin-top: .25rem;
 }
 
 .widget {
@@ -133,19 +212,49 @@ opacity: 1;
     padding: 15px;
     background: white;
     border-radius: 5px;
-    border: solid 1px black;
+    border: none;
 }
 
 /* RECIPES WIDGET */
 .widget-body a {
     display: block;
+    padding-left: .2rem;
+    text-decoration: none;
+
 }
 
-.recipes-body button {
+/* .recipes-widget h2 {
+    margin-bottom: .15rem;
+    background: #86a451;
+    color: #fff;
+    padding: .2rem;
+    border-radius: .25rem;
+    text-decoration: underline; meh dont like too much
+} */
+
+/* .recipes-body button {
     display: block;
-}
+    margin-top: .5rem;
+} */
 
 /* WEATHER WIDGET */
 .weather-body {
     display: flex;
 }
+
+/* .weather-widget h2 {
+    margin-bottom: .15rem;
+    background: #86a451;
+    color: #fff;
+    padding: .2rem;
+    border-radius: .25rem;
+}
+
+/* OTHER EVENTS WIDGET */
+/* .events-widget h2 {
+    margin-bottom: .15rem;
+    background: #86a451;
+    color: #fff;
+    padding: .2rem;
+    border-radius: .25rem;
+} */ 
