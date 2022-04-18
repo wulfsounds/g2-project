@@ -1,15 +1,22 @@
 <div class="widgets-container">
     <div class="recipes-widget widget">
-        <h2>Recipes for the week</h2>
-        <div class="recipes-body widget-body">
-            <a href="">Spaghetti w/ meatballs</a>
-            <a href="">Oven-roasted Turkey</a>
-            <a href="">Black Bean Burger</a>
-            <a href="">Deep Fried Butter</a>
-            <a href="">Black Bean Burger</a>
-            <a href="">Deep Fried Butter</a>
-            <button>Get different recipes</button>
+        <h2>This Week's Culinary Experience:</h2>
+        {{!-- Didn't work {{#each culexp as |culExp|}} --}}
+        <div class="recipes-body widget-body">        
+            <p>Dinner Theme: {{category_name}}</p>
+            {{!-- <p>User ID: {{category.user_id}}</p> --}}
+            {{#each recipes as |recipe|}}
+            <p>Menu: <a href="{{recipe.recipe_link}}">{{recipe.recipe_name}}</a></p>
+            {{/each}}
+            {{#each wines as |wine|}}
+            <p>Suggested Wine Pairing: {{wine.wine_name}}</p>
+            {{/each}}
+            {{#each playlists as |playlist|}}
+            <p>Playlist: <a href="{{playlist.playlist_link}}">{{playlist.playlist_name}}</a></p>
+            {{/each}}
+            <button>Get different experience</button> 
         </div>
+        {{!-- {{/each}} --}}
     </div>
     <div class="weather-widget widget">
         <h2>Weekly Forecast</h2>
