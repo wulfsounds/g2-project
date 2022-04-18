@@ -11,7 +11,7 @@ Day.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    day_date: {
+    day_time: {
       type: DataTypes.STRING,
       allowNull: false,
     },
