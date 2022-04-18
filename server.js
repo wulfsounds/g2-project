@@ -40,6 +40,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
+// app.get('/', (req,res) => {
+//   res.render(path.join(__dirname, 'homework/projects/g2-project/public/html/splash.html'))
+// })
+
 // load splash html
 app.get('/splash', (req,res) => {
   if (req.session.loggedIn) {
