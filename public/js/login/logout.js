@@ -5,10 +5,10 @@ const logout = async () => {
   });
 
   if (response.ok) {
-    document.location.replace('/');
+    document.location.replace('/splash');
   } else {
     alert(response.statusText);
   }
 };
 
-document.querySelector('.logout-btn').addEventListener('click', logout);
+document.querySelector('#logout-btn').addEventListener('click', logout);

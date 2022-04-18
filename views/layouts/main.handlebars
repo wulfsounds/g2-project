@@ -23,7 +23,7 @@
                 <button>profile/preferences</button>
                 <button> < </button>
                 <button> > </button>
-                <button class="logout-btn">Logout</button>
+                <button id="logout-btn">Logout</button>
             </div>
         </nav>
     </header>
@@ -38,5 +38,9 @@
         {{{body}}}
     
     </main>
+
+    {{#if loggedIn}}
+        <script src="/js/login/logout.js"></script>
+    {{/if}}
 </body>
 </html>
