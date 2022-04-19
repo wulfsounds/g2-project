@@ -54,11 +54,11 @@ $(".time-blocks")
 		let currentTime = moment().format("H");
 		// past time
 		if (i < currentTime) {
-			$(e).css("background-color", "#8ce4f8");
+			$(e).css("background-color", "#d8d3b0");
 		}
 		// future time
 		else if (i > currentTime) {
-			$(e).css("background-color", "#41a436");
+			$(e).css("background-color", "#93ab3a");
 		}
 		// present time
 		else {

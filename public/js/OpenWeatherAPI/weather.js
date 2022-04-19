@@ -98,5 +98,3 @@ async function fiveDay() {
 		i++;
 	});
 }
-
-// function date()

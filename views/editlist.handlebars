@@ -1,28 +1,32 @@
-<div>
+<a href="/weekly"><button id="switch-view1">home</button></a>
+<a href="/day"><button id="switch-view2">daily view</button></a>
+<div class="card">
 
     {{!-- list title/day --}}
-    <div>
+    <div class="box edit-header">
         <h3>{{list.list_date}}</h3>
     </div>
 
     {{!-- list body --}}
-    <div>
+    <div class="editlist-container">
         <form id="editlist">
-            {{#if list.tasks}}
-                {{#each list.tasks as |task|}}
-                <div>
-                    <input name="task" type="text" value="{{task.task}}" required>
-                    <button data-id="{{task.id}}" class="updatetask" type="submit">update</button>
-                    <button id="{{task.id}}" class="deletetask" type="submit">delete</button>
-                </div>
-                {{/each}}
-            {{/if}}
+            <div class="box card-body">
+                {{#if list.tasks}}
+                    {{#each list.tasks as |task|}}
+                    <div class="list-update">
+                        <input class="edit-input" name="task" type="text" value="{{task.task}}" required>
+                        <button data-id="{{task.id}}" class="updatetask" type="submit">update</button>
+                        <button id="{{task.id}}" class="deletetask" type="submit">delete</button>
+                    </div>
+                    {{/each}}
+                {{/if}}
+            </div>
 
                 {{!-- ADD TASK INPUT AND BUTTON --}}
-                <div>
-                    <input type="text" name="task" placeholder="enter task" required>
+                <form class="list-enter">
+                    <input class="edit-input" type="text" name="task" placeholder="enter task" required>
                     <button type="submit" id="addtask" autocomplete="off" class="addtask">+</button>
-                </div>
+                </form>
         </form>
     </div>
 
