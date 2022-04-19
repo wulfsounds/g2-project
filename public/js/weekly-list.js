@@ -13,7 +13,7 @@ const handleWeeklyForm = async (event) => {
 const addTask = async (target) => {
     const task = target.previousElementSibling.value;
 
-    console.log(task)
+    // console.log(task)
 
     if (task) {
       const response = await fetch(`/api/lists/${target.id}`, {
