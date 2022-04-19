@@ -8,7 +8,7 @@ console.log(moment().format("L"));
 // Weather Variables
 let userLocation;
 let weather;
-let apiKey = "1f56ef55a0f3d4c3bb739f2d664d73f9";
+// let apiKey = "1f56ef55a0f3d4c3bb739f2d664d73f9";
 
 getLocation();
 
@@ -77,10 +77,18 @@ async function fiveDay() {
 		let dayTemp = document.createElement("p");
 		dayTemp.setAttribute("class", "day-temp");
 
-		
+		let unix = weather.daily[i].dt;
+		let date = new Date(unix * 1000);
+		let day = date.getDay();
+		let month = + date.getMonth();
+		var dayDate = month + '/' + day;
+
+
 		console.log(dayIcon);
 		console.log(dayTemp);
+		console.log(weather.daily[i].dt);
 
+		$(".five-day").append(dayDate);
 		$(".five-day").append(dayIcon);
 		$(".five-day").append(dayTemp);
 		$(dayTemp).text(`Temp: ${Math.floor(weather.daily[i].temp.day)}`);
@@ -88,3 +96,5 @@ async function fiveDay() {
 		i++;
 	});
 }
+
+// function date()
