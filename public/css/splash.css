@@ -56,3 +56,15 @@
   
     font-size: 30px;
   }
+
+  @media screen and (max-width: 1200px) {
+    footer {
+      font-size: 25px;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    footer {
+      font-size: 15px;
+    }
+  }
