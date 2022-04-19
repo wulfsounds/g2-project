@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { List, Task, User } = require('../../models');
 
-// ADD task to list
+// ADD task to weekly view list
 router.post('/:id', async (req, res) => {
 
   try {
@@ -13,17 +13,18 @@ router.post('/:id', async (req, res) => {
 
     res.status(200).json(newTask);
 
-    } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-    }
-    
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+
 });
 
-// UPDATE task
+// UPDATE task in weekly view list
 router.put('/:id/:taskId', async (req, res) => {
+
   try {
-      const updatedTask = await Task.update({
+    const updatedTask = await Task.update({
         task: req.body.task,
       },
       {
@@ -32,20 +33,22 @@ router.put('/:id/:taskId', async (req, res) => {
         }
       });
     
-      res.json(updatedTask);
-      } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-      }
-  
+    res.json(updatedTask);
+
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+
 });
 
-// DELETE tesk
+// DELETE task from weekly view list
 router.delete('/:id/:taskId', async (req, res) => {
+  
   try {
       const deletedTask = await Task.destroy({
           where: {
-              id: req.params.taskId,
+            id: req.params.taskId,
           },
       });    
 
@@ -55,9 +58,11 @@ router.delete('/:id/:taskId', async (req, res) => {
     }
 
     res.status(200).json(deletedTask);
+
   } catch (err) {
     res.status(500).json(err);
   }
+    
 });
 
 module.exports = router;

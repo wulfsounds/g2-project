@@ -1,9 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-// Initialize Product model (table) by extending off Sequelize's Model class
+
+// Initialize Wine Model 
 class Wine extends Model {}
 
-// set up fields and rules for Product model
+// Set up fields and rules for Wine Model
 Wine.init(
   {
     id: {

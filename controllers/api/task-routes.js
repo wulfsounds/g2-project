@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Task } = require('../../models');
 
-// CREATE new task
+// ADD new task
 router.post('/', async (req, res) => {
 
   try {
@@ -13,10 +13,10 @@ router.post('/', async (req, res) => {
 
     res.status(200).json(newTask);
 
-    } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-    }
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
     
 });
 
