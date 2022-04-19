@@ -12,9 +12,13 @@ function dailyWeather() {
         .then(response => {
             // console.log(response.data);
 
+            // extract daily forecast
             const { daily } = response.data;
+
+            // day0 is current day, day1-day-5 is next 5 days
             const [ day0, day1, day2, day3, day4, day5 ]  = daily;
 
+            // return 5-day forecast
             return [ day1, day2, day3, day4, day5 ];
         })
 
