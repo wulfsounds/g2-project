@@ -46,10 +46,18 @@ app.get('/', (req,res) => {
     res.redirect('/weekly');
     return;
   }
-
+  
   res.sendFile(path.join(__dirname, '/public/html/splash.html'))
+})
+
+app.get('/day', (req, res) => {
+    if(req.session.loggedIn) {
+      res.sendFile(path.join(__dirname, '/public/html/dayCal.html'));
+      return;
+    }
 })
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
+

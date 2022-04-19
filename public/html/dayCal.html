@@ -6,35 +6,38 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Belleza"/>
   <link rel="stylesheet" href="../css/style.css">
   <title>thyme | for the love of food, wine, and music</title>
   <link rel="icon" type="image/x-icon" href="../img/Thyme-ico.ico">
+  <link rel="stylesheet" href="../css/dayCal.css">
 </head>
 
 <body>
   <header>
-    <h1>thyme</h1>
+    <img class="thyme-head" src="../img/thyme-header-logo-white.png" alt="thyme logo">
     <nav>
-      <div>
-        <p class="date"></p>
-      </div>
-      <div>
-        <button>profile/preferences</button>
-        <button>
-          < </button>
+        <div>
+        <!-- <p class="today">{{getDate}}</p> -->
+        </div>
+        <div>
+            <button>profile/preferences</button>
+            <button> < </button>
             <button> > </button>
-      </div>
+            <a href="/login"><button id="logout-btn">Logout</button></a>
+        </div>
     </nav>
-  </header>
+</header>
   <main>
+    <a href="/weekly"><button id="switch-view">weekly view</button></a>
     <div class="list-container" style="flex-wrap: wrap;">
       <div class="col">
         <div class="card">
           <!-- keep this for Date -->
           <div class="box card-header col-10">
-            <h3 class="currentTime"></h3>
+            <h3 class="currentTime" style="color: white; font-size: 35px"></h3>
           </div>
-
+            
           <div class="time-blocks">
             <!-- Timeblocks go here -->
             <div id="hour" class="row nine">
@@ -181,63 +184,68 @@
               <button id="saveBtn" class="saveBtn col-1"><span class="btn-text">SAVE</span></button>
             </div>
           </div>
-          <div class="widgets-container container">
-            <div class="recipes-widget widget">
-              <h2>Recipes for the week</h2>
-              <div class="recipes-body widget-body">
-                <a href="">Spaghetti w/ meatballs</a>
-                <a href="">Oven-roasted Turkey</a>
-                <a href="">Black Bean Burger</a>
-                <a href="">Deep Fried Butter</a>
-                <a href="">Black Bean Burger</a>
-                <a href="">Deep Fried Butter</a>
-                <button>Get different recipes</button>
-              </div>
-            </div>
-            <div class="weather-widget widget">
-              <h2 class="weather-head">Weekly Forecast
-                <span class="realTemp"></span><span class="local"></span>
-              </h2>
-              <div class="weather-body">
-                <!-- OpenWeather 5-Day -->
-               
-                <div class="weather-day">
-                  <h4>Weekly</h4>
-                  <p class="five-day"></p>
-                </div>
-              </div>
-            </div>
-            <div class="events-widget widget">
-              <h2>Events during the week</h2>
-              <div class="events-body widget-body">
-                <a href="">April 14 - race</a>
-                <a href="">April 15 - concert</a>
-                <a href="">April 14 - race</a>
-                <a href="">April 15 - concert</a>
-                <a href="">April 14 - race</a>
-                <a href="">April 15 - concert</a>
-                <button>See more events near me</button>
-              </div>
-            </div>
-            <div class="events-widget widget">
-              <h2>Some other random widget</h2>
-              <div class="events-body widget-body">
-                <a href="">April 14 - race</a>
-                <a href="">April 15 - concert</a>
-                <a href="">April 14 - race</a>
-                <a href="">April 15 - concert</a>
-                <a href="">April 14 - race</a>
-                <a href="">April 15 - concert</a>
-                <button>See more events near me</button>
-              </div>
-            </div>
-          </div>
   </main>
+  <article class="container ">
+    <div class="widgets-container container">
+      <div class="recipes-widget widget ">
+        <h2>Recipes for the week</h2>
+        <div class="recipes-body widget-body">
+          <a href="">Spaghetti w/ meatballs</a>
+          <a href="">Oven-roasted Turkey</a>
+          <a href="">Black Bean Burger</a>
+          <a href="">Deep Fried Butter</a>
+          <a href="">Black Bean Burger</a>
+          <a href="">Deep Fried Butter</a>
+          <button>Get different recipes</button>
+        </div>
+      </div>
+      <div class="weather-widget widget">
+        <h2 class="weather-head">Weekly Forecast
+          <h4>Current</h4>
+          <span class="realTemp"></span>
+          <span class="local"></span>
+        </h2>
+        <div class="weather-body">
+          <!-- OpenWeather 5-Day -->
+         
+          <div class="weather-day">
+            <p class="five-day"></p>
+          </div>
+        </div>
+      </div>
+      <div class="events-widget widget ">
+        <h2>Events during the week</h2>
+        <div class="events-body widget-body">
+          <a href="">April 14 - race</a>
+          <a href="">April 15 - concert</a>
+          <a href="">April 14 - race</a>
+          <a href="">April 15 - concert</a>
+          <a href="">April 14 - race</a>
+          <a href="">April 15 - concert</a>
+          <button>See more events near me</button>
+        </div>
+      </div>
+      <div class="events-widget widget ">
+        <h2>Some other random widget</h2>
+        <div class="events-body widget-body">
+          <a href="">April 14 - race</a>
+          <a href="">April 15 - concert</a>
+          <a href="">April 14 - race</a>
+          <a href="">April 15 - concert</a>
+          <a href="">April 14 - race</a>
+          <a href="">April 15 - concert</a>
+          <button>See more events near me</button>
+        </div>
+      </div>
+    </div>
+  </article>
   <!-- current JS used for dayCal -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="../js/OpenWeatherAPI/weather.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="../js/day-cal.js"></script>
+  <script src="../js/OpenWeatherAPI/dailyWeather.js"></script>
 </body>
 
 </html>
