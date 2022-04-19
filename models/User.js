@@ -1,15 +1,15 @@
-
-//Borrowed bp code from unit 14-MVC mini_project
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
+// Initialize User Model and return encrypted password
 class User extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
 
+// Set up fields and rules for User Model
 User.init(
   {
     id: {
@@ -37,8 +37,9 @@ User.init(
         len: [8],
       },
     },
-    //TODO: Add section for music and cuisine preferences (may or may not get used)
   },
+  
+  // Encrypt user password
   {
     hooks: {
       beforeCreate: async (newUserData) => {

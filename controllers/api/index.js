@@ -7,7 +7,7 @@ const categoryRoutes = require('./category-routes');
 const playlistRoutes = require('./playlist-routes');
 const recipeRoutes = require('./recipe-routes');
 const wineRoutes = require('./wine-routes');
-const dayRoutes = require('./day-routes');
+const dayRoutes = require('./day-routes'); //remove?
 
 router.use('/users', userRoutes);
 router.use('/lists', listRoutes);
@@ -16,6 +16,6 @@ router.use('/category', categoryRoutes);
 router.use('/playlist', playlistRoutes);
 router.use('/recipe', recipeRoutes);
 router.use('/wine', wineRoutes);
-router.use('/day', dayRoutes);
+router.use('/day', dayRoutes); //remove?
 
 module.exports = router;

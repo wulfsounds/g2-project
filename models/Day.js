@@ -1,8 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
+// Initialize Day Model
 class Day extends Model {}
 
+// Set up fields and rules for Day Model
 Day.init(
   {
     id: {
