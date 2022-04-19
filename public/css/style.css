@@ -147,6 +147,8 @@ button {
   /* background: #6fa8dc; */
 }
 
+
+
 input:checked + p {
   text-decoration: line-through;
   text-decoration-color: #df75aa;
@@ -210,7 +212,63 @@ input[type="text"]:focus {
   opacity: 1;
 }
 
-/* WIDGETS */
+/* *Edit list styling */
+
+.list-update {
+  min-height: 1.875rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 0.0625rem solid #f1f1f1;
+  /* background: #6fa8dc; */
+}
+
+.editlist-container {
+  min-height: 31.25rem;
+  margin: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: #a4bb7c;
+  border-radius: 0.5rem;
+  padding: .5rem;
+  /* using to view containers */
+}
+
+.edit-input[type="text"] {
+  text-align: center;
+  height: 3.125rem;
+  top: 0.625rem;
+  border: none;
+  background: transparent;
+  font-size: 1.1rem;
+  font-weight: 200;
+  padding: .5rem;
+  width: 112rem;
+}
+
+.updatetask, .deletetask {
+  margin-right: .5rem;
+} 
+
+#editlist {
+  width: 115rem;
+}
+
+.edit-header {
+  /* background-color: #248018; */
+  /* background-color: #70b5c4; */
+  margin: 2rem;
+  text-align: center;
+} 
+
+.edit-header h3 {
+  color: #86a451;
+  padding: 0.625rem;
+  font-size: 2.5rem;
+}
+
+
+/* *WIDGETS */
 
 /* entire widget container */
 .widgets-container {
