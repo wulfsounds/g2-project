@@ -1,6 +1,3 @@
-var moment = require('moment'); // http://momentjs.com/docs/
-var _ = require('lodash'); // https://lodash.com/docs
-
 // Display Date
 let date = moment().format("L");
 $("time").text(date);
@@ -89,39 +86,5 @@ async function fiveDay() {
 
 		i++;
 	});
-    let day;
-    let dayDates = document.createElement("p");
-    dayDates.setAttribute("class", "day-date"); 
-    addDate(day);
-    dayDates.text(day)
-    $(".five-day").append(dayDates);
 }
 
-function addDate(collectionsWithDateValues){
-  var slots = [];
-  var hours = {
-    start: 7,   // 7am
-    end: 21,    // 9pm
-    window: 2   // How long each item should be slotted for.
-  };
-  var rightNow  = moment().add(0, 'days').hours(hours.start).minute(0).second(0);
-  var cutoff    = moment(rightNow).add(5,'days'); // Check the next 2 weeks.
-  
-  for( rightNow ; rightNow.isBefore(cutoff) ; rightNow.add(hours.window, 'hours') ){
-    // Check if we're going beyond the daily cutoff, go to the next day
-    if(rightNow.isAfter(moment(rightNow).hour(hours.end))){
-      rightNow.add(1, 'days').hour(hours.start);
-    }
-  
-    var foundClash = false;
-    _.forEach(collectionsWithDateValues,  function(item){
-      // Check if the item is within now and the slotted time 
-      foundClash = moment(item.date).isBetween(rightNow, moment(rightNow).add(hours.window, 'hours').subtract(1, 'minutes').seconds(59));
-    });
-  
-    if(!foundClash){
-      slots.push(rightNow.toString());
-    }
-  }
-  return slots;
-}

@@ -1,8 +1,14 @@
 .container {
     display: flex;
     justify-content: center;
-
 }
+
+.thyme-head {
+    /* Sizing */
+    width: 15%;
+    margin: 0;
+    padding: 0.5rem;
+  }
 
 .widgets-container {
 width: 175em;
