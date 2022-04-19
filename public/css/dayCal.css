@@ -1,0 +1,62 @@
+.container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.widgets-container {
+width: 175em;
+padding: 0;
+margin: 0;
+  }
+
+h4 {
+    margin: 0;
+}
+
+.icons {
+    width: 50px;
+}
+
+.day-temp, .five-icon {
+    width: 50px;
+}
+
+.time-blocks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1299px;
+}
+
+.row {
+width: 1233px;
+}
+
+button {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #fff;
+    background: #48631a; 
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.4rem;
+}
+
+#switch-view {
+    position: absolute;
+    top: 6em;
+    right: 3em;
+}
+
+.card {
+    background-color: transparent;
+}
+
+.box {
+    background-color: transparent;
+}
+
+.currentTime {
+    color: #fff;
+}
