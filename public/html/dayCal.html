@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../css/style.css">
   <title>thyme | for the love of food, wine, and music</title>
   <link rel="icon" type="image/x-icon" href="../img/Thyme-ico.ico">
+  <!-- <script src="https://kit.fontawesome.com/b95f853310.js" crossorigin="anonymous"></script> -->
   <link rel="stylesheet" href="../css/dayCal.css">
 </head>
 
@@ -29,21 +30,22 @@
     </nav>
 </header>
   <main>
-    <a href="/weekly"><button id="switch-view">weekly view</button></a>
+    <a href="/weekly"><button id="switch-view3">weekly view</button></a>
     <div class="list-container" style="flex-wrap: wrap;">
       <div class="col">
         <div class="card">
           <!-- keep this for Date -->
-          <div class="box card-header col-10">
-            <h3 class="currentTime" style="color: white; font-size: 35px"></h3>
+          <div class="box edit-header">
+            <!-- style="color: white; font-size: 35px" -->
+            <h3 class="currentTime"></h3>
           </div>
             
           <div class="time-blocks">
             <!-- Timeblocks go here -->
-            <div id="hour" class="row nine">
+            <div id="hour-start" class="row nine">
               <div id="time" class="col-1 hour"><span class="hour-text">12 AM</span></div>
               <textarea id="textarea" class="col-10 text"></textarea>
-              <button id="saveBtn" class="saveBtn col-1">SAVE</button>
+              <button id="saveBtn-start" class="saveBtn col-1">SAVE</button>
             </div>
 
             <div id="hour" class="row nine">
@@ -178,10 +180,10 @@
               <button id="saveBtn" class="saveBtn col-1"><span class="btn-text">SAVE</span></button>
             </div>
 
-            <div id="hour" class="row five">
+            <div id="hour-end" class="row five">
               <div id="time" class="col-1 hour"><span class="hour-text">11 PM</span></div>
               <textarea id="textarea" class="col-10 text"></textarea>
-              <button id="saveBtn" class="saveBtn col-1"><span class="btn-text">SAVE</span></button>
+              <button id="saveBtn-end" class="saveBtn col-1"><span class="btn-text">SAVE</span></button>
             </div>
           </div>
   </main>
