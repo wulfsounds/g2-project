@@ -15,21 +15,20 @@ body {
   /* place-items: center; */
   margin-top: 1rem;
   width: 100%;
-  /* background: #7a2d2d;  using to view containers*/
   background: -webkit-linear-gradient(left, #48631a, #86a451);
 }
 
-.thyme-head {
-  /* Sizing */
-  /* width: 15%; */
+/* .thyme-head {
+  Sizing
+  width: 15%;
   margin: 0;
-  padding: .5rem;
-}
+  padding: 0.5rem;
+} */
 
 /* full header container */
 header {
   padding: 1rem;
-  /* margin-left: 1.5rem; */
+  margin-left: 1.5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -40,6 +39,7 @@ header h1 {
   font-size: 3rem;
   color: #fff;
 }
+
 
 nav {
   display: flex;
@@ -66,7 +66,6 @@ nav button {
   border: none;
   border-radius: 0.2rem;
   padding: 0.6rem;
-  
 }
 
 nav button:hover {
@@ -102,10 +101,10 @@ nav button:hover {
 
 .box {
   /* max-width: 12.5rem; */
-  margin: .625rem auto;
+  margin: 0.625rem auto;
   background: white;
-  border-radius: .3125rem;
-  box-shadow: .3125rem .3125rem 1.3125rem -.3125rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.3125rem;
+  box-shadow: 0.3125rem 0.3125rem 1.3125rem -0.3125rem rgba(0, 0, 0, 0.3);
 }
 
 /* List Day heading */
@@ -117,7 +116,7 @@ nav button:hover {
 
 .card-header h3 {
   color: #86a451;
-  padding: .625rem;
+  padding: 0.625rem;
   font-size: 1.4rem;
 }
 
@@ -146,14 +145,14 @@ input:checked + p {
 }
 
 input[type="checkbox"] {
-  margin: 1.25rem .625rem 1.25rem 1.25rem;
+  margin: 1.25rem 0.625rem 1.25rem 1.25rem;
   opacity: 0.8;
 }
 
 /* all p text */
 p {
   margin: 0;
-  padding: .625rem;
+  padding: 0.625rem;
   font-size: 1.15rem;
   font-weight: 200;
   color: #00204a;
@@ -176,7 +175,7 @@ form {
   background-color: transparent;
   color: green;
   font-size: 1.25rem;
-  padding-bottom: .4375rem;
+  padding-bottom: 0.4375rem;
   border-width: 0;
 }
 
@@ -184,7 +183,7 @@ form {
 input[type="text"] {
   text-align: center;
   height: 3.125rem;
-  top: .625rem;
+  top: 0.625rem;
   border: none;
   background: transparent;
   font-size: 1rem;
@@ -239,10 +238,10 @@ input[type="text"]:focus {
 
 .widget {
   /* max-width: 12.5rem; */
-  margin: .625rem;
+  margin: 0.625rem;
   padding: 1.3125rem;
   background: white;
-  border-radius: .3125rem;
+  border-radius: 0.3125rem;
   border: none;
 }
 
@@ -286,10 +285,9 @@ input[type="text"]:focus {
     border-radius: .25rem;
 } */
 
-
 /* OTHER EVENTS WIDGET */
 .events-widget .events-body {
-  padding: .5rem;
+  padding: 0.5rem;
   line-height: 2rem;
   font-size: 1.25rem;
 }
@@ -304,3 +302,50 @@ input[type="text"]:focus {
   375×667 
   360×640
 */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 240px) {
+  header {
+    position: relative;
+    width: 50%;
+    margin-left: 1.75rem;
+  }
+
+  main {
+    position: relative;
+    width: 90%;
+    margin-left: 0.5rem;
+  }
+}
+/* 
+@media screen and (max-width: 320px) {
+  .login-thyme {
+    position: relative;
+    width: 66%;
+    margin-left: 1.75rem;
+  }
+
+  .wrapper {
+    position: relative;
+    width: 90%;
+    margin-left: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .login-thyme {
+    position: relative;
+    width: 70%;
+    margin-left: 1.75rem;
+  }
+
+  .wrapper {
+    position: relative;
+    width: 95%;
+    margin-left: 0.5rem;
+  }
+} */
