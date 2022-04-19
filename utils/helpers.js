@@ -13,6 +13,7 @@ function getDate() {
 }
 
 function convertTimestamp(timestamp) {
+    
     const options = {
         month: 'long',
         day: 'numeric'
@@ -21,6 +22,7 @@ function convertTimestamp(timestamp) {
     // convert timestamp: https://stackoverflow.com/questions/24170933/convert-unix-timestamp-to-date-time-javascript
     const date = new Date(timestamp*1000);
     const convertedDate = date.toLocaleString('en-US', options);
+    // result: April 13
 
     return convertedDate;
 }
