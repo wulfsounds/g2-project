@@ -10,6 +10,9 @@ let btnIdx = 0;
 // Display Current Date and Time
 $("h3").text(`${currentDate} ${currentTime}`);
 
+// Display Current Date ONLY
+$("h4").text(`${currentDate}`);
+
 // Activate planner and update with local storage  // DEBUG: #textarea is clearing on page refresh
 $(".time-blocks").on("click", ".saveBtn", function () {
 	getLocal();
