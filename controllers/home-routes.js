@@ -37,7 +37,7 @@ const dailyWeather = require('../utils/dailyWeather');
 
 // });
 
-// get weekly view page
+// GET weekly view page and JOIN with user data
 router.get('/weekly', async (req, res) => {
 
     if (!req.session.loggedIn) {
@@ -56,17 +56,21 @@ router.get('/weekly', async (req, res) => {
               }
             ],
           });
-        
+          
+          // Get user data
           const user = userData.get({ plain: true });
           console.log(user);
 
+          // Get local weather data
           const weatherData = await dailyWeather();
           
+          // Get culinary experience data
           const newCulExp = await Category.findByPk(1, {
             include: [ { model: Recipe }, { model: Wine }, {model: Playlist } ],
           });
           const culExp = newCulExp.get({ plain: true });
 
+          // Render all data to homepage
           res.render('homepage', {
             ...user, 
             ...culExp,
@@ -82,25 +86,7 @@ router.get('/weekly', async (req, res) => {
 
 });
 
-// GET culinary experience
-// router.get('/culexp/:id', async (req, res) => {
-
-//   try {
-//       const newCulExp = await Category.findByPk(req.params.id, {
-//         include: [ { model: Recipe}, { model: Wine}, { model: Playlist}  ],
-//       });
-//       const culExp = newCulExp.get({ plain: true });
-
-//       res.json(culExp);
-      
-//     } catch (err) {
-//       console.log(err);
-//       res.status(500).json(err);
-//     }
-    
-// });
-
-// get login page
+// GET login page
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');

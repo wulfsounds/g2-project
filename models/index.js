@@ -1,4 +1,3 @@
-// Caitlin's Code
 const User = require('./User');
 const Recipe = require('./Recipe');
 const Category = require('./Category');
@@ -8,7 +7,7 @@ const List = require('./List');
 const Task = require('./Task');
 const Day = require('./Day');
 
-// Models belongsTo Category
+// Culinary Experience Associations
 Recipe.belongsTo(Category, {
   foreignKey: 'category_id',
 });
@@ -21,7 +20,6 @@ Wine.belongsTo(Category, {
   foreignKey: 'category_id',
 });
 
-// Category hasMany Models
 Category.hasMany(Recipe, {
   foreignKey: 'category_id',
   onDelete: 'CASCADE',
@@ -37,7 +35,7 @@ Category.hasMany(Wine, {
   onDelete: 'CASCADE',
 });
 
-//User's culinary experience associations
+// User's Culinary Experience Associations
 User.hasMany(Category, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
@@ -48,8 +46,7 @@ Category.belongsTo(User, {
 });
 
 
-
-// Neema's Code
+// User's Calendar Associations
 User.hasMany(List, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
@@ -76,7 +73,7 @@ Task.belongsTo(User, {
 });
 
 
-// Add Day
+// Calendar Associations
 User.hasMany(Day, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'

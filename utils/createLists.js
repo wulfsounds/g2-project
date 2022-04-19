@@ -1,5 +1,6 @@
 const { List } = require('../models');
 
+// Weekly view list generator
 const createLists = (userId) => {
     
     const weeklylist = [

@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { User, List, Task } = require('../models');
 
-// get edit list page
+// GET edit list page
 router.get('/list/:id', async (req, res) => {
 
   if (!req.session.loggedIn) {
@@ -14,6 +14,7 @@ router.get('/list/:id', async (req, res) => {
         });
         const list = singleList.get({ plain: true });
 
+        // confirms approved user is accessing list
         if(list.user_id !== req.session.user_id) {
           res.send('Access Denied! You have no permission to view this list.')
         } else {

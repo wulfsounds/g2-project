@@ -1,9 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-// Initialize Product model (table) by extending off Sequelize's Model class
+
+// Initialize Recipe Model
 class Recipe extends Model {}
 
-// set up fields and rules for Product model
+// Set up fields and rules for Recipe Model
 Recipe.init(
   {
     id: {
