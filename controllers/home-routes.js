@@ -67,7 +67,6 @@ router.get('/weekly', async (req, res) => {
           });
           const culExp = newCulExp.get({ plain: true });
 
-
           res.render('homepage', {
             ...user, 
             ...culExp,
