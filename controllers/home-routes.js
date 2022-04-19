@@ -70,7 +70,7 @@ router.get('/weekly', async (req, res) => {
           res.render('homepage', {
             ...user, 
             ...culExp,
-            // data: weatherData,
+            data: weatherData,
             loggedIn: req.session.loggedIn,
           });
           

@@ -1,3 +1,4 @@
+
 // Display Date
 let date = moment().format("L");
 $("time").text(date);
@@ -87,4 +88,3 @@ async function fiveDay() {
 		i++;
 	});
 }
-
