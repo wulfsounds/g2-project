@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { User, List, Day, Task, Category, Recipe, Wine, Playlist } = require('../models');
-
+const dailyWeather = require('../utils/dailyWeather');
 
 // get daily view
 router.get('/day', async (req, res) => {
@@ -59,15 +59,19 @@ router.get('/weekly', async (req, res) => {
         
           const user = userData.get({ plain: true });
           console.log(user);
+
+          const weatherData = await dailyWeather();
           
           const newCulExp = await Category.findByPk(1, {
             include: [ { model: Recipe }, { model: Wine }, {model: Playlist } ],
           });
           const culExp = newCulExp.get({ plain: true });
 
+
           res.render('homepage', {
             ...user, 
             ...culExp,
+            data: weatherData,
             loggedIn: req.session.loggedIn,
           });
           
