@@ -66,3 +66,27 @@ button {
 .currentTime {
     color: #fff;
 }
+
+.weather-day {
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+}
+
+.weather-widget {
+    display: flex;
+    flex-direction: column;
+    width: 430px;
+}
+
+.five-day {
+    width: 175px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.five-icons {
+    width: 60px;
+    /* height: auto; */
+}

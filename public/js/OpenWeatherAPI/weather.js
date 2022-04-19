@@ -74,6 +74,8 @@ async function fiveDay() {
 			`src`,
 			`http://openweathermap.org/img/wn/${icon}@2x.png`
 		);
+
+		dayIcon.setAttribute(`class`, `five-icons`);
 		let dayTemp = document.createElement("p");
 		dayTemp.setAttribute("class", "day-temp");
 
@@ -82,7 +84,7 @@ async function fiveDay() {
 		let day = date.getDay();
 		let month = + date.getMonth();
 		var dayDate = month + '/' + day;
-
+		
 
 		console.log(dayIcon);
 		console.log(dayTemp);
