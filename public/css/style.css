@@ -21,7 +21,7 @@ body {
 
 .thyme-head {
   /* Sizing */
-  width: 15%;
+  /* width: 15%; */
   margin: 0;
   padding: .5rem;
 }
@@ -29,7 +29,7 @@ body {
 /* full header container */
 header {
   padding: 1rem;
-  margin-left: 1.5rem;
+  /* margin-left: 1.5rem; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -76,6 +76,7 @@ nav button:hover {
 .main {
   display: flex;
   flex-direction: column;
+  width: 100%;
   /* background: red; */
 }
 
@@ -198,7 +199,7 @@ input[type="text"]:focus {
 
 /* enter task text on enter box */
 ::placeholder {
-  color: grey;
+  color: #778d53;
   opacity: 1;
 }
 
@@ -295,54 +296,11 @@ input[type="text"]:focus {
 
 /* *RESPONSIVE WEB DESIGN */
 /* RESPONSIVE DESIGN BREAKPOINTS
-    1920×1080
-    1366×768
-    360×640
-    414×896
-    1536×864
-    375×667 
+  1536×864
+  1366×768
+  1025*1200
+  768*1366
+  414×896
+  375×667 
+  360×640
 */
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Media Queries: Tablet Landscape */
-@media screen and (max-width: 1366px) {
-  header {
-      width: 77%;
-  }
-    .list-container {
-    width: 74%;
-    /* margin: auto; */
-  }
-  .col {
-      width: 14%;
-  }
-  
-}
-
-/* Media Queries: Tablet Portrait */
-@media screen and (max-width: 81.25rem) {
-    header {
-        width: 55%;
-    }
-      .list-container {
-      width: 50%;
-      /* font-size: 50%; */
-      /* margin: auto; */
-    }
-    .col {
-        width: 14%;
-        /* font-size: .25rem; */
-    }
-    .card h3 {
-        font-size: 1.2rem;
-    }
-    p, input[type="text"], .task-button{
-        font-size: .9rem;
-        padding: auto;
-    }
-    
-}

@@ -16,10 +16,10 @@ html,body {
     background: -webkit-linear-gradient(left, #48631a,#86a451);
 }
 
-header {
+/* header {
     display: flex;
     align-items: flex-start;
-}
+} */
 
 .login-thyme {
     display: flex;
@@ -173,6 +173,65 @@ input[type="radio"] {
     cursor: pointer;
     background: -webkit-linear-gradient(left, #48631a,#86a451);
 }
+
+/* *RESPONSIVE WEB DESIGN */
+/* RESPONSIVE DESIGN BREAKPOINTS
+  1536×864
+  1366×768
+  1025*1200
+  768*1366
+  414×896
+  375×667 
+  360×640
+*/
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  @media screen and (max-width: 240px) {
+    .login-thyme {
+      position: relative;
+      width: 50%;
+      margin-left: 1.75rem;
+    }
+  
+    .wrapper {
+      position: relative;
+      width: 90%;
+      margin-left: .5rem;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    .login-thyme {
+      position: relative;
+      width: 66%;
+      margin-left: 1.75rem;
+    }
+  
+    .wrapper {
+      position: relative;
+      width: 90%;
+      margin-left: .5rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .login-thyme {
+      position: relative;
+      width: 70%;
+      margin-left: 1.75rem;
+    }
+  
+    .wrapper {
+      position: relative;
+      width: 95%;
+      margin-left: .5rem;
+    }
+  }
+  
+  
 
 /* color choices for button
 light pink (left, #b14885,#CC88B7);
