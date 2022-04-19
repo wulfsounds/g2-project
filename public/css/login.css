@@ -11,7 +11,6 @@ html,
 body {
   display: grid;
   height: 100%;
-  /* place-items: center; */
   margin-top: 10%;
   width: 100%;
   background: -webkit-linear-gradient(left, #48631a, #86a451);
@@ -23,7 +22,6 @@ body {
 } */
 
 .login-thyme {
-  /* width: 24.25rem; */
   justify-content: center;
   margin: auto;
 }
@@ -234,6 +232,3 @@ img {
   }
 }
 
-/* color choices for button
-light pink (left, #b14885,#CC88B7);
-green(left, #48631a,#86a451); */
