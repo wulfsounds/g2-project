@@ -65,6 +65,22 @@ nav button:hover {
   background-color: #354912;
 }
 
+button {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+  background: #48631a; 
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.4rem;
+}
+
+#switch-view {
+  position: absolute;
+  top: 8em;
+  right: 3em;
+}
+
 .main {
   display: flex;
   flex-direction: column;
