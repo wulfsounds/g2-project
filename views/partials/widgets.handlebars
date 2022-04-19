@@ -23,36 +23,21 @@
         <input type="text">
         <div class="weather-body">
             {{!-- Adding OpenWeather API from Dev --}}
+       
+                {{#each data as |day|}}
                 <div class="weather-day">
-                  <h4>Weekly</h4>
-                  <p class="five-day"></p>
+
+                    <h4>{{convertTimestamp day.dt}}</h4>
+
+                    {{#each day.weather as |weather|}}
+                    <img src="http://openweathermap.org/img/wn/{{weather.icon}}.png"  alt="weather-icon">
+                    {{/each}}
+
+                    <p>{{day.temp.day}}°F</p>
+
                 </div>
-                {{!-- template from original weekly build by Neema --}}
-            {{!-- <div class="weather-day">
-                <h4>Monday</h4>
-                <img src="./img/img_209726.png" width="30px" alt="">
-                <p>50F</p>
-            </div>
-            <div class="weather-day">
-                <h4>Tuesday</h4>
-                <img src="./img/img_209726.png" width="30px" alt="">
-                <p>50F</p>
-            </div>
-            <div class="weather-day">
-                <h4>Wednesday</h4>
-                <img src="./img/img_209726.png" width="30px" alt="">
-                <p>50F</p>
-            </div>
-            <div class="weather-day">
-                <h4>Thursday</h4>
-                <img src="./img/img_209726.png" width="30px" alt="">
-                <p>50F</p>
-            </div>
-            <div class="weather-day">
-                <h4>Friday</h4>
-                <img src="./img/img_209726.png" width="30px" alt="">
-                <p>50F</p>
-            </div> --}}
+                {{/each}}
+            
         </div>
     </div>
     <div class="events-widget widget">
