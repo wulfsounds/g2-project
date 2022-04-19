@@ -22,7 +22,7 @@ const handleForm = async(event) => {
 const addTask = async (target) => {
     const task = target.previousElementSibling.value;
 
-    console.log(task)
+    // console.log(task)
 
     if (task) {
       const response = await fetch(`/api/lists/${listId}`, {
@@ -43,7 +43,7 @@ const addTask = async (target) => {
 
 
 const updateTask = async (target) => {
-    console.log(target.dataset.id);
+    // console.log(target.dataset.id);
     const task = target.previousElementSibling.value;
 
     if (task) {
@@ -65,8 +65,8 @@ const updateTask = async (target) => {
 
 const delTask = async (target) => {
 
-    console.log(listId);
-    console.log(target.id);
+    // console.log(listId);
+    // console.log(target.id);
 
     const response = await fetch(`/api/lists/${listId}/${target.id}`, {
       method: 'DELETE',

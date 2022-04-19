@@ -15,7 +15,7 @@ router.get('/list/:id', async (req, res) => {
         const list = singleList.get({ plain: true });
 
         if(list.user_id !== req.session.user_id) {
-          res.send('Denied access! List belongs to another user.')
+          res.send('Access Denied! You have no permission to view this list.')
         } else {
           res.render('editlist', { list, loggedIn: req.session.loggedIn });
         }
