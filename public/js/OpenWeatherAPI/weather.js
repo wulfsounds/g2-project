@@ -1,5 +1,3 @@
-var moment = require('moment'); // http://momentjs.com/docs/
-var _ = require('lodash'); // https://lodash.com/docs
 
 // Display Date
 let date = moment().format("L");
@@ -10,7 +8,7 @@ console.log(moment().format("L"));
 // Weather Variables
 let userLocation;
 let weather;
-let apiKey = "1f56ef55a0f3d4c3bb739f2d664d73f9";
+// let apiKey = "1f56ef55a0f3d4c3bb739f2d664d73f9";
 
 getLocation();
 
@@ -76,52 +74,29 @@ async function fiveDay() {
 			`src`,
 			`http://openweathermap.org/img/wn/${icon}@2x.png`
 		);
+
+		dayIcon.setAttribute(`class`, `five-icons`);
 		let dayTemp = document.createElement("p");
 		dayTemp.setAttribute("class", "day-temp");
 
+		let unix = weather.daily[i].dt;
+		let date = new Date(unix * 1000);
+		let day = date.getDay();
+		let month = + date.getMonth();
+		var dayDate = month + '/' + day;
 		
+
 		console.log(dayIcon);
 		console.log(dayTemp);
+		console.log(weather.daily[i].dt);
 
+		$(".five-day").append(dayDate);
 		$(".five-day").append(dayIcon);
 		$(".five-day").append(dayTemp);
 		$(dayTemp).text(`Temp: ${Math.floor(weather.daily[i].temp.day)}`);
 
 		i++;
 	});
-    let day;
-    let dayDates = document.createElement("p");
-    dayDates.setAttribute("class", "day-date"); 
-    addDate(day);
-    dayDates.text(day)
-    $(".five-day").append(dayDates);
 }
 
-function addDate(collectionsWithDateValues){
-  var slots = [];
-  var hours = {
-    start: 7,   // 7am
-    end: 21,    // 9pm
-    window: 2   // How long each item should be slotted for.
-  };
-  var rightNow  = moment().add(0, 'days').hours(hours.start).minute(0).second(0);
-  var cutoff    = moment(rightNow).add(5,'days'); // Check the next 2 weeks.
-  
-  for( rightNow ; rightNow.isBefore(cutoff) ; rightNow.add(hours.window, 'hours') ){
-    // Check if we're going beyond the daily cutoff, go to the next day
-    if(rightNow.isAfter(moment(rightNow).hour(hours.end))){
-      rightNow.add(1, 'days').hour(hours.start);
-    }
-  
-    var foundClash = false;
-    _.forEach(collectionsWithDateValues,  function(item){
-      // Check if the item is within now and the slotted time 
-      foundClash = moment(item.date).isBetween(rightNow, moment(rightNow).add(hours.window, 'hours').subtract(1, 'minutes').seconds(59));
-    });
-  
-    if(!foundClash){
-      slots.push(rightNow.toString());
-    }
-  }
-  return slots;
-}
+// function date()
