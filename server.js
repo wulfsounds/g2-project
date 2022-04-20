@@ -1,8 +1,10 @@
+// Import Dependencies
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 
+//Import Routes, Connections, Sequelize
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -29,6 +31,7 @@ const sess = {
 
 app.use(session(sess));
 
+// Handlebars Set Up
 const hbs = exphbs.create({ helpers });
 
 app.engine('handlebars', hbs.engine);
@@ -50,6 +53,7 @@ app.get('/', (req,res) => {
   res.sendFile(path.join(__dirname, '/public/html/splash.html'))
 })
 
+// load dayCal html
 app.get('/day', (req, res) => {
     if(req.session.loggedIn) {
       res.sendFile(path.join(__dirname, '/public/html/dayCal.html'));
