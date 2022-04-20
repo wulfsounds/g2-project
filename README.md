@@ -11,6 +11,7 @@ Thyme is a weekly calendar that uses back-end databasing using Node, Express.js,
 -   [Contributions](#Contributions)
 -   [Usage](#Usage)
 -   [Links](#Links)
+-   [Credits](#Credits)
 -   [License](#License)
 -   [Questions](#Questions)
 
@@ -68,6 +69,7 @@ Insomnia
 readme.so
 
 ### Design Technology
+
 ![Adobe Xd](https://img.shields.io/badge/Adobe%20XD-470137?style=for-the-badge&logo=Adobe%20XD&logoColor=#FF61F6)
 ![Photoshop](https://img.shields.io/badge/Adobe%20Photoshop-31A8FF?style=for-the-badge&logo=Adobe%20Photoshop&logoColor=black)
 
@@ -102,6 +104,16 @@ Procreate
 
 - [GitHub](https://github.com/wulfsounds/g2p-thyme)
 
+## Credits
+
+Photo Credits in Order of Appearance:
+
+### Splash Page
+
+- [Pablo Merchán Montes](https://unsplash.com/@pablomerchanm)
+- [Jimmy Dean](https://unsplash.com/@jimmydean)
+- [Joseph Gonzalez](https://unsplash.com/@miracletwentyone)
+- [Stephanie McCabe](https://unsplash.com/@stephaniemccabe)
 
 ## License
 
@@ -127,5 +139,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+## Questions
+
+For questions, contact us through <a href="https://github.com/wulfsounds">Github!</a>
 
 
