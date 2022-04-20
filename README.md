@@ -98,7 +98,7 @@ Procreate
 
 ## Links 
 
-- [Heroku](https://dry-garden-37593.herokuapp.com/)
+- [Heroku](https://thyme-calendar.herokuapp.com/)
 
 - [GitHub](https://github.com/wulfsounds/g2p-thyme)
 
