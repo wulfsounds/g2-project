@@ -346,7 +346,7 @@ input[type="text"]:focus {
 
 .shopping-widget input[type="checkbox"]{
   padding-right: .25rem;
- background: lightgrey;
+  background: lightgrey;
 }
 
 .shopping-widget input {

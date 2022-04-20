@@ -1,6 +1,8 @@
 .container {
-  display: flex;
-  justify-content: center;
+  position: absolute;
+  top: 49.5rem;
+  left: 7rem;
+  padding-bottom: 3rem;
 }
 
 .thyme-head {
@@ -8,12 +10,6 @@
   width: 17%;
   margin: 0;
   padding: 0.5rem;
-}
-
-.widgets-container {
-  width: 175rem;
-  padding: 0;
-  margin: 0;
 }
 
 h4 {
@@ -116,16 +112,25 @@ button {
   /* height: auto; */
 }
 
-.widgets-container div {
-    min-width: 18rem;
+/* .widgets-container div {
+    min-width: 24rem;
     text-align: center;
-}
+} */
 
 .widgets-container a {
-    /* min-width: 18rem; */
-    text-align: center;
+    min-width: 18rem;
+    /* text-align: center; */
 }
 
 .widgets-container h2 {
     font-size: 1.5rem;
 }
+
+.shopping-widget input[type="checkbox"]{
+  display: flex;
+  justify-content: flex-start;
+  margin: 1rem;
+  padding-right: .25rem;
+  background: lightgrey;
+}
+
