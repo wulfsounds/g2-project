@@ -20,26 +20,6 @@ router.post('/:id', async (req, res) => {
 
 });
 
-// UPDATE task in day view list
-// router.put('/:id/:taskId', async (req, res) => {
-//   try {
-//       const updatedTask = await Task.update({
-//         task: req.body.task,
-//       },
-//       {
-//         where: {
-//           id: req.params.taskId
-//         }
-//       });
-    
-//       res.json(updatedTask);
-//       } catch (err) {
-//         console.log(err);
-//         res.status(500).json(err);
-//       }
-  
-// });
-
 // DELETE task in day view list
 router.delete('/:id/:taskId', async (req, res) => {
 

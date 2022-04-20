@@ -1,3 +1,4 @@
+//Implement Axios to parse OpenWeather API into handlebars
 const axios = require('axios');
 
 let apiKey = "1f56ef55a0f3d4c3bb739f2d664d73f9";
