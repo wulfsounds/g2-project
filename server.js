@@ -31,9 +31,10 @@ const sess = {
 
 app.use(session(sess));
 
-// Handlebars Set Up
+// Set up Handlebars with custom Helpers
 const hbs = exphbs.create({ helpers });
 
+// Designate template engine for Express.js
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
@@ -43,7 +44,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-// load splash html
+// GET Splash Page (redirect to weekly view if user loggedIn)
 app.get('/', (req,res) => {
   if (req.session.loggedIn) {
     res.redirect('/weekly');
@@ -53,7 +54,7 @@ app.get('/', (req,res) => {
   res.sendFile(path.join(__dirname, '/public/html/splash.html'))
 })
 
-// load dayCal html
+// GET Day Calendar View
 app.get('/day', (req, res) => {
     if(req.session.loggedIn) {
       res.sendFile(path.join(__dirname, '/public/html/dayCal.html'));

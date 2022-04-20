@@ -1,10 +1,8 @@
 <div class="widgets-container">
     <div class="recipes-widget widget">
         <h2>This Week's Culinary Experience:</h2>
-        {{!-- Didn't work {{#each culexp as |culExp|}} --}}
         <div class="recipes-body widget-body">        
             <p>Dinner Theme: {{category_name}}</p>
-            {{!-- <p>User ID: {{category.user_id}}</p> --}}
             {{#each recipes as |recipe|}}
             <p>Menu: <a href="{{recipe.recipe_link}}">{{recipe.recipe_name}}</a></p>
             {{/each}}
@@ -16,11 +14,12 @@
             {{/each}}
             <button>Get different experience</button> 
         </div>
-        {{!-- {{/each}} --}}
     </div>
     <div class="weather-widget widget">
         <h2>Weekly Forecast</h2>
-        <input type="text">
+        {{!-- Dummy input field/button. No functionality yet.--}}
+        <input type="text" placeholder="enter city name">
+        <button>Search</button>
         <div class="weather-body">
             {{!-- Adding OpenWeather API from Dev --}}
        
@@ -43,25 +42,26 @@
     <div class="events-widget widget">
         <h2>Events during the week</h2>
         <div class="events-body widget-body">
-            <a href="">April 14 - race</a>
-            <a href="">April 15 - concert</a>
-            <a href="">April 14 - race</a>
-            <a href="">April 15 - concert</a>
-            <a href="">April 14 - race</a>
-            <a href="">April 15 - concert</a>
+            <a href="https://txwsw.com/pilates-in-the-square/">April 19 - Pilates in the Square</a>
+            <a href="https://www.eventbrite.com/e/munchies-fest-on-420-tickets-308364816467?aff=ebdssbdestsearch">April 20 - Munchies Fest</a>
+            <a href="https://www.eventbrite.com/e/purple-disco-machine-at-itll-do-club-tickets-256457309717">April 23 - Purple Disco Machine (concert)</a>
+            <a href="https://www.eventbrite.com/e/brunch-in-dallabasas-uptown-tickets-137657588553?aff=ebdssbdestsearch">April 23 - Brunch in Dalabasas-Uptown</a>
             <button>See more events near me</button>
         </div>
     </div>
-    <div class="events-widget widget">
-        <h2>Some other random widget</h2>
+    <div class="shopping-widget widget">
+        <h2>Shopping List</h2>
         <div class="events-body widget-body">
-            <a href="">April 14 - race</a>
-            <a href="">April 15 - concert</a>
-            <a href="">April 14 - race</a>
-            <a href="">April 15 - concert</a>
-            <a href="">April 14 - race</a>
-            <a href="">April 15 - concert</a>
-            <button>See more events near me</button>
+                <input type="checkbox" class="form-check-input" id="shopItem1">
+                <input type="text" class="form-control" id="shopItem1Input">
+            <br>
+                <input type="checkbox" class="form-check-input" id="shopItem2">
+                <input type="text" class="form-control" id="shopItem2Input">
+            <br>
+                <input type="checkbox" class="form-check-input" id="shopItem3">
+                <input type="text" class="form-control" id="shopItem3Input">
+                <br/>
+            <button>Print List</button>
         </div>
     </div>     
 </div>

@@ -8,8 +8,10 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Belleza"/>
   <link rel="stylesheet" href="../css/style.css">
+  <title>thyme | for the love of food, wine, and music</title>
+  <link rel="icon" type="image/x-icon" href="../img/Thyme-ico.ico">
+  <!-- <script src="https://kit.fontawesome.com/b95f853310.js" crossorigin="anonymous"></script> -->
   <link rel="stylesheet" href="../css/dayCal.css">
-  <title>thyme</title>
 </head>
 
 <body>
@@ -28,21 +30,22 @@
     </nav>
 </header>
   <main>
-    <a href="/weekly"><button id="switch-view">weekly view</button></a>
+    <a href="/weekly"><button id="switch-view3">weekly view</button></a>
     <div class="list-container" style="flex-wrap: wrap;">
       <div class="col">
         <div class="card">
           <!-- keep this for Date -->
-          <div class="box card-header col-10">
-            <h3 class="currentTime" style="color: white; font-size: 35px"></h3>
+          <div class="box edit-header">
+            <!-- style="color: white; font-size: 35px" -->
+            <h3 class="currentTime"></h3>
           </div>
             
           <div class="time-blocks">
             <!-- Timeblocks go here -->
-            <div id="hour" class="row nine">
+            <div id="hour-start" class="row nine">
               <div id="time" class="col-1 hour"><span class="hour-text">12 AM</span></div>
               <textarea id="textarea" class="col-10 text"></textarea>
-              <button id="saveBtn" class="saveBtn col-1">SAVE</button>
+              <button id="saveBtn-start" class="saveBtn col-1">SAVE</button>
             </div>
 
             <div id="hour" class="row nine">
@@ -177,29 +180,27 @@
               <button id="saveBtn" class="saveBtn col-1"><span class="btn-text">SAVE</span></button>
             </div>
 
-            <div id="hour" class="row five">
+            <div id="hour-end" class="row five">
               <div id="time" class="col-1 hour"><span class="hour-text">11 PM</span></div>
               <textarea id="textarea" class="col-10 text"></textarea>
-              <button id="saveBtn" class="saveBtn col-1"><span class="btn-text">SAVE</span></button>
+              <button id="saveBtn-end" class="saveBtn col-1"><span class="btn-text">SAVE</span></button>
             </div>
           </div>
   </main>
-  <article class="container ">
+  <article class="container">
     <div class="widgets-container container">
       <div class="recipes-widget widget ">
-        <h2>Recipes for the week</h2>
+        <h2>This Week's Culinary Experience:</h2>
         <div class="recipes-body widget-body">
-          <a href="">Spaghetti w/ meatballs</a>
-          <a href="">Oven-roasted Turkey</a>
-          <a href="">Black Bean Burger</a>
-          <a href="">Deep Fried Butter</a>
-          <a href="">Black Bean Burger</a>
-          <a href="">Deep Fried Butter</a>
-          <button>Get different recipes</button>
+          <p>Dinner Theme: Italian</p>
+          <p>Menu: <a href="https://www.allrecipes.com/recipe/23600/worlds-best-lasagna/">Lasagna</a></p>
+          <p>Suggested Wine Pairing: Chianti Classico</p>
+          <p>Playlist: <a href="https://open.spotify.com/playlist/0EpxQXFSAs8cVTfXo3m33H?si=58ed0041e024458e">Italian Dinner Playlist</a></p>
+          <button>Get different experience</button>
         </div>
       </div>
       <div class="weather-widget widget">
-        <h2 class="weather-head">Weekly Forecast
+        <h2 class="weather-head">Current Forecast
           <h4>Current</h4>
           <span class="realTemp"></span>
           <span class="local"></span>
@@ -215,25 +216,25 @@
       <div class="events-widget widget ">
         <h2>Events during the week</h2>
         <div class="events-body widget-body">
-          <a href="">April 14 - race</a>
-          <a href="">April 15 - concert</a>
-          <a href="">April 14 - race</a>
-          <a href="">April 15 - concert</a>
-          <a href="">April 14 - race</a>
-          <a href="">April 15 - concert</a>
-          <button>See more events near me</button>
+            <a href="https://txwsw.com/pilates-in-the-square/">April 19 - Pilates in the Square</a>
+            <a href="https://www.eventbrite.com/e/munchies-fest-on-420-tickets-308364816467?aff=ebdssbdestsearch">April 20 - Munchies Fest</a>
+            <a href="https://www.eventbrite.com/e/purple-disco-machine-at-itll-do-club-tickets-256457309717">April 23 - Purple Disco Machine (concert)</a>
+            <a href="https://www.eventbrite.com/e/brunch-in-dallabasas-uptown-tickets-137657588553?aff=ebdssbdestsearch">April 23 - Brunch in Dalabasas-Uptown</a>
+            <button>See more events near me</button>
         </div>
       </div>
-      <div class="events-widget widget ">
-        <h2>Some other random widget</h2>
+      <div class="shopping-widget widget ">
+        <h2>Shopping List</h2>
         <div class="events-body widget-body">
-          <a href="">April 14 - race</a>
-          <a href="">April 15 - concert</a>
-          <a href="">April 14 - race</a>
-          <a href="">April 15 - concert</a>
-          <a href="">April 14 - race</a>
-          <a href="">April 15 - concert</a>
-          <button>See more events near me</button>
+            <input type="checkbox" class="form-check-input" id="shopItem1">
+            <input type="text" class="form-control" id="shopItem1Input">
+          <br>
+          <input type="checkbox" class="form-check-input" id="shopItem2">
+            <input type="text" class="form-control" id="shopItem2Input">
+          <br>
+            <input type="checkbox" class="form-check-input" id="shopItem3">
+            <input type="text" class="form-control" id="shopItem3Input">
+          <button>Print List</button>
         </div>
       </div>
     </div>

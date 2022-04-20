@@ -10,6 +10,9 @@ let btnIdx = 0;
 // Display Current Date and Time
 $("h3").text(`${currentDate} ${currentTime}`);
 
+// Display Current Date ONLY
+$("h4").text(`${currentDate}`);
+
 // Activate planner and update with local storage  // DEBUG: #textarea is clearing on page refresh
 $(".time-blocks").on("click", ".saveBtn", function () {
 	getLocal();
@@ -51,11 +54,11 @@ $(".time-blocks")
 		let currentTime = moment().format("H");
 		// past time
 		if (i < currentTime) {
-			$(e).css("background-color", "#8ce4f8");
+			$(e).css("background-color", "#d8d3b0");
 		}
 		// future time
 		else if (i > currentTime) {
-			$(e).css("background-color", "#41a436");
+			$(e).css("background-color", "#93ab3a");
 		}
 		// present time
 		else {

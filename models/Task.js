@@ -1,8 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
+// Initialize Task Model
 class Task extends Model {}
 
+// Set up fields and rules for Task Model
 Task.init(
   {
     id: {

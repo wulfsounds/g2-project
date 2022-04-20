@@ -1,8 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection.js');
 
+// Initialize Category Model
 class Category extends Model {}
 
+// Set up fields and rules for Category Model
 Category.init(
   {
     id: {
@@ -15,30 +17,6 @@ Category.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-    // recipe_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: 'recipe',
-    //     key: 'id',
-    //     unique: false
-    //   }
-    // },
-    // wine_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: 'wine',
-    //     key: 'id',
-    //     unique: false
-    //   }
-    // },
-    // playlist_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: 'playlist',
-    //     key: 'id',
-    //     unique: false
-    //   }
-    // },
     user_id: {
       type: DataTypes.INTEGER,
       references: {

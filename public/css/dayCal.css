@@ -1,92 +1,131 @@
 .container {
-    display: flex;
-    justify-content: center;
+  position: absolute;
+  top: 49.5rem;
+  left: 7rem;
+  padding-bottom: 3rem;
 }
 
 .thyme-head {
-    /* Sizing */
-    width: 15%;
-    margin: 0;
-    padding: 0.5rem;
-  }
-
-.widgets-container {
-width: 175em;
-padding: 0;
-margin: 0;
-  }
+  /* Sizing */
+  width: 17%;
+  margin: 0;
+  padding: 0.5rem;
+}
 
 h4 {
-    margin: 0;
+  margin: 0;
 }
 
 .icons {
-    width: 50px;
+  width: 3.125rem;
 }
 
-.day-temp, .five-icon {
-    width: 50px;
+.day-temp,
+.five-icon {
+  width: 3.125rem;
 }
 
 .time-blocks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+#time, .saveBtn {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    width: 1299px;
+    justify-content: center;
+    border-radius: 0rem;
+    border: none;
+}
+
+#hour-start {
+    border-radius: .5rem 0rem 0rem 0rem;
+}
+
+#hour-end {
+    border-radius: 0rem 0rem 0rem .5rem;
+}
+
+
+#saveBtn-start {
+    border-radius: 0rem .5rem 0rem 0rem;
+}
+
+#saveBtn-end {
+    border-radius: 0rem 0rem .5rem 0rem;
 }
 
 .row {
-width: 1233px;
+  width: 110rem;
 }
 
 button {
-    font-size: 1.2rem;
-    text-align: center;
-    color: #fff;
-    background: #48631a; 
-    border: none;
-    border-radius: 0.2rem;
-    padding: 0.4rem;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+  background: #48631a;
+  border: none;
+  /* border-radius: 0.2rem; */
+  padding: 0.4rem;
 }
 
-#switch-view {
-    position: absolute;
-    top: 6em;
-    right: 3em;
+#switch-view3 {
+  position: absolute;
+  top: 8.5rem;
+  right: 5.4rem;
+  background: #df75aa;
+}
+
+#switch-view3:hover {
+  background-color: #eb98c2;
 }
 
 .card {
-    background-color: transparent;
+  background-color: transparent;
+  border: none;
 }
 
-.box {
-    background-color: transparent;
-}
-
-.currentTime {
-    color: #fff;
-}
 
 .weather-day {
-    display: flex;
-    flex-direction: row;
-    width: 250px;
+  display: flex;
+  flex-direction: row;
+  width: 23.125rem;
 }
 
 .weather-widget {
-    display: flex;
-    flex-direction: column;
-    width: 430px;
+  display: flex;
+  flex-direction: column;
+  width: 26.875rem;
 }
 
 .five-day {
-    width: 175px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  width: 10.938rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .five-icons {
-    width: 60px;
-    /* height: auto; */
+  width: 3.75rem;
+  /* height: auto; */
 }
+
+.widgets-container a {
+    min-width: 18rem;
+    /* text-align: center; */
+}
+
+.widgets-container h2 {
+    font-size: 1.5rem;
+}
+
+.shopping-widget input[type="checkbox"]{
+  display: flex;
+  justify-content: flex-start;
+  margin: 1rem;
+  padding-right: .25rem;
+  background: lightgrey;
+}
+

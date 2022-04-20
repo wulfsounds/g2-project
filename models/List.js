@@ -1,8 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
+// Initialize List Model
 class List extends Model {}
 
+// Set up fields and rules for List Model
 List.init(
   {
     id: {

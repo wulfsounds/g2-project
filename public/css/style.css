@@ -5,14 +5,12 @@
   font-family: Belleza, sans-serif;
   font-style: normal;
   font-weight: 500;
-  /* background: #e06666; using to view containers */
 }
 
 html,
 body {
   display: grid;
   height: 100%;
-  /* place-items: center; */
   margin-top: 1rem;
   width: 100%;
   background: -webkit-linear-gradient(left, #48631a, #86a451);
@@ -25,7 +23,6 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* background: #f6b26b; using to view containers */
 }
 
 header h1 {
@@ -33,16 +30,13 @@ header h1 {
   color: #fff;
 }
 
-
 nav {
   display: flex;
   align-items: center;
-  /* background: #f9cb9c using to view containers; */
 }
 
 nav div {
   padding: 0 1rem;
-  /* background: #ffe599; */
 }
 
 nav div p {
@@ -77,8 +71,35 @@ button {
 
 #switch-view {
   position: absolute;
-  top: 8em;
-  right: 3em;
+  top: 9rem;
+  right: 6.4rem;
+  background:#df75aa;
+}
+
+#switch-view:hover {
+  background-color: #eb98c2;
+}
+
+#switch-view1 {
+  position: absolute;
+  top: 10rem;
+  right: 5rem;
+  background:#df75aa;
+}
+
+#switch-view1:hover {
+  background-color: #eb98c2;
+}
+
+#switch-view2 {
+  position: absolute;
+  top: 10rem;
+  right: 9rem;
+  background:#df75aa;
+}
+
+#switch-view2:hover {
+  background-color: #eb98c2;
 }
 
 .main {
@@ -105,7 +126,6 @@ button {
 /* holds all weekday info */
 .col {
   flex-basis: 16.67%;
-  /* background: #6aa84f; using to view containers */
 }
 
 .box {
@@ -118,8 +138,6 @@ button {
 
 /* List Day heading */
 .card-header {
-  /* background-color: #248018; */
-  /* background-color: #70b5c4; */
   text-align: center;
 }
 
@@ -135,7 +153,6 @@ button {
 }
 
 .card-header a:hover {
-  /* text-decoration: underline; */
   color: #df75aa;
 }
 
@@ -145,8 +162,9 @@ button {
   display: flex;
   align-items: center;
   border-bottom: 0.0625rem solid #f1f1f1;
-  /* background: #6fa8dc; */
 }
+
+
 
 input:checked + p {
   text-decoration: line-through;
@@ -165,14 +183,11 @@ p {
   font-size: 1.15rem;
   font-weight: 200;
   color: #00204a;
-  /* background: #A683E3; */
 }
 
 /* enter task box */
 form {
   text-align: center;
-  /* margin-left: 1.25rem; */
-  /* background: #3d85c6; */
 }
 
 /* little plus button on enter task box */
@@ -211,7 +226,59 @@ input[type="text"]:focus {
   opacity: 1;
 }
 
-/* WIDGETS */
+/* *Edit list styling */
+
+.list-update {
+  min-height: 1.875rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 0.0625rem solid #f1f1f1;
+}
+
+.editlist-container {
+  min-height: 31.25rem;
+  margin: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: #a4bb7c;
+  border-radius: 0.5rem;
+  padding: .5rem;
+}
+
+.edit-input[type="text"] {
+  text-align: center;
+  height: 3.125rem;
+  top: 0.625rem;
+  border: none;
+  background: transparent;
+  font-size: 1.1rem;
+  font-weight: 200;
+  padding: .5rem;
+  width: 112rem;
+}
+
+.updatetask, .deletetask {
+  margin-right: .5rem;
+} 
+
+#editlist {
+  width: 115rem;
+}
+
+.edit-header {
+  margin: 2rem;
+  text-align: center;
+} 
+
+.edit-header h3 {
+  color: #86a451;
+  padding: 0.625rem;
+  font-size: 2.5rem;
+}
+
+
+/* *WIDGETS */
 
 /* entire widget container */
 .widgets-container {
@@ -219,7 +286,6 @@ input[type="text"]:focus {
   margin: 1.75rem;
   text-align: center;
   line-height: 1.5rem;
-  /* background: #b4a7d6; */
 }
 
 .widgets-container h2 {
@@ -246,7 +312,6 @@ input[type="text"]:focus {
 }
 
 .widget {
-  /* max-width: 12.5rem; */
   margin: 0.625rem;
   padding: 1.3125rem;
   background: white;
@@ -257,42 +322,42 @@ input[type="text"]:focus {
 /* RECIPES WIDGET */
 .widget-body a {
   display: block;
-  /* padding-left: .2rem; */
   text-decoration: none;
   color: #86a451;
 }
 
 .widget-body a:hover {
-  /* text-decoration: underline; */
   color: #df75aa;
 }
 
-/* .recipes-widget h2 {
-    margin-bottom: .15rem;
-    background: #86a451;
-    color: #fff;
-    padding: .2rem;
-    border-radius: .25rem;
-    text-decoration: underline; meh dont like too much
-} */
-
-/* .recipes-body button {
-    display: block;
-    margin-top: .5rem;
-} */
 
 /* WEATHER WIDGET */
 .weather-body {
   display: flex;
 }
 
-/* .weather-widget h2 {
-    margin-bottom: .15rem;
-    background: #86a451;
-    color: #fff;
-    padding: .2rem;
-    border-radius: .25rem;
-} */
+
+/* SHOPPING EVENTS WIDGET */
+.shopping-widget .events-body {
+  padding: 0.25rem;
+  line-height: 2rem;
+  font-size: 1.25rem;
+}
+
+.shopping-widget input[type="checkbox"]{
+  padding-right: .25rem;
+  background: lightgrey;
+}
+
+.shopping-widget input {
+ background: rgb(240, 236, 236);
+ border-radius: 0.2rem;
+}
+
+.shopping-widget .form-check-input {
+  margin-right: 0.2rem;
+  margin-left: .1rem;
+}
 
 /* OTHER EVENTS WIDGET */
 .events-widget .events-body {

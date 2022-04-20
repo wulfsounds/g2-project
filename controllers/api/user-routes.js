@@ -1,11 +1,11 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 const createLists = require('../../utils/createLists')
-// CREATE new user
+
+// ADD new user
 router.post('/', async (req, res) => {
 
   try {
-
     // check if password and confirm password inputs match
     // if (req.body.password === req.body.confirmpw) {
       const dbUserData = await User.create({
@@ -19,9 +19,8 @@ router.post('/', async (req, res) => {
     // }
 
 
-    // As soon as user creates an account, automatically generate a list for each day (Mon-Sun).. createLists is under utils folder
+    // Auto-generate daily lists using createList util
     if(dbUserData) {
-      // console.log(dbUserData);
       createLists(dbUserData.id);
     }
     req.session.save(() => {
@@ -38,8 +37,9 @@ router.post('/', async (req, res) => {
 
 });
 
-// Login
+// LOGIN functionality
 router.post('/login', async (req, res) => {
+
   try {
     const dbUserData = await User.findOne({
       where: {
@@ -71,21 +71,26 @@ router.post('/login', async (req, res) => {
         .status(200)
         .json({ user: dbUserData, message: 'You are now logged in!' });
     });
+
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
+
 });
 
-// Logout
+// LOGOUT functionality
 router.post('/logout', (req, res) => {
+
   if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
     });
+
   } else {
     res.status(404).end();
   }
+  
 });
 
 

@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User, List, Day, Task, Category, Recipe, Wine, Playlist } = require('../models');
 const dailyWeather = require('../utils/dailyWeather');
 
-// get weekly view page
+// GET weekly view page and JOIN with user data
 router.get('/weekly', async (req, res) => {
 
     if (!req.session.loggedIn) {
@@ -21,17 +21,21 @@ router.get('/weekly', async (req, res) => {
               }
             ],
           });
-        
+          
+          // Get user data
           const user = userData.get({ plain: true });
           console.log(user);
 
+          // Get local weather data
           const weatherData = await dailyWeather();
           
+          // Get culinary experience data
           const newCulExp = await Category.findByPk(1, {
             include: [ { model: Recipe }, { model: Wine }, {model: Playlist } ],
           });
           const culExp = newCulExp.get({ plain: true });
 
+          // Render all data to homepage
           res.render('homepage', {
             ...user, 
             ...culExp,
@@ -47,7 +51,7 @@ router.get('/weekly', async (req, res) => {
 
 });
 
-// get login page
+// GET login page
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
